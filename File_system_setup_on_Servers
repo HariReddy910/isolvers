@@ -1,0 +1,84 @@
+Servers	File system	Application Name	Business Solution	System(Application) Owner	Status
+s1pvap080	/export/home/webdep	360Control - US	GFS	Ryan, Declan (ryand)	We can align on a Tue/Wed/Thur night( as this is not a code Release) and if there are no Deployments or Patching CRs scheduled.
+s1pvap081	/export/home/webdep	360Control - US	GFS	Ryan, Declan (ryand)	We can align on a Tue/Wed/Thur night( as this is not a code Release) and if there are no Deployments or Patching CRs scheduled.
+s1pvap082	/export/home/webdep	360Control - US	GFS	Ryan, Declan (ryand)	We can align on a Tue/Wed/Thur night( as this is not a code Release) and if there are no Deployments or Patching CRs scheduled.
+s1pvwb030	/export/home/webdep	360Control - US	GFS	Ryan, Declan (ryand)	We can align on a Tue/Wed/Thur night( as this is not a code Release) and if there are no Deployments or Patching CRs scheduled.
+s1pvwb031	/export/home/webdep	360Control - US	GFS	Ryan, Declan (ryand)	We can align on a Tue/Wed/Thur night( as this is not a code Release) and if there are no Deployments or Patching CRs scheduled.
+n3cvap972	/export/home/webdep	Cls_Loop PBC (Prepaid Business Center)	NSS	Pridgeon, Peter A (ppridgeo)	Owner want to continue with /home/<users>, as there are going to decommission the server by mid-year and replacing with new servers with additional resource.
+N1CVAP918	/export/home/webdep	ServicePoint Manager	GFS	Bradberry, Thomas Gregory (fb7rsj2)	REQ000002282037 
+a1pvap207	/home/webdep	Rapid Connect - Authcore	GBS	"Howe, Thomas (thowe) / Fletcher, Andrew W (afletche)
+"	Mail Sent
+a1pvap208	/home/webdep	Rapid Connect - Authcore	GBS	"Howe, Thomas (thowe) / Fletcher, Andrew W (afletche)
+"	Mail Sent
+s1bvap974	/export/home/webdep	TRACKER (ATM Monitoring)	NSS	Irwin, David K. (irwindk)	Mail sent
+s1bvap975	/export/home/webdep	TRACKER (ATM Monitoring)	NSS	Irwin, David K. (irwindk)	Mail sent
+s1bvap976	/export/home/webdep	TRACKER (ATM Monitoring)	NSS	Irwin, David K. (irwindk)	Mail sent
+s1bvap977	/export/home/webdep	TRACKER (ATM Monitoring)	NSS	Irwin, David K. (irwindk)	Mail sent
+r3pvap1237	/home/webdep	FDC - TSP	NSS	Chockalingom, Namasivayam (f6axlq1)	Ready to make the file system changes, need to check the patching schedule in appmap and go with that.
+r3pvap1238	/home/webdep	FDC - TSP	NSS	Chockalingom, Namasivayam (f6axlq1)	Ready to make the file system changes, need to check the patching schedule in appmap and go with that.
+r1pvap1327	/home/webdep	FDC - TSP	NSS	Chockalingom, Namasivayam (f6axlq1)	Ready to make the file system changes, need to check the patching schedule in appmap and go with that.
+r1pvap1326	/home/webdep	FDC - TSP	NSS	Chockalingom, Namasivayam (f6axlq1)	Ready to make the file system changes, need to check the patching schedule in appmap and go with that.
+s3pvdb028	/export/home	MAC Billing	NSS	Scherer, Laura C. (scherec)	Mail sent
+s3cvdb999	/export/home	RLOG UNIX (Remote Logging) 	NSS	Klotz, Robert P. (klotzr)	REQ000002283451 - Completed
+s1bvdb988	/export/home	MAC Billing	NSS	Scherer, Laura C. (scherec)	REQ000002292136
+a1pvap122	/home/webdep	STAR Flexible Settlement (FLEX)	NSS	Ahmadi, Munir A. (f9hhhtl)	Mail sent
+s3pvdb029 	/export/home	TRACKER (ATM Monitoring)	NSS	Irwin, David K. (irwindk)	Mail sent
+s3pvdb020 	/export/home	Debit Fee Engine	GBS	Hendry, Gary C (f3kcj4w)	REQ000002293709 - Completed
+s3pvdb021 	/export/home	Buypass Tools	GBS	Hendry, Gary C (f3kcj4w)	REQ000002293709 - Completed
+a3pvap189 	/home/webdep	Rapid Connect - Authcore	GBS	Howe, Thomas (thowe)	Mail sent
+a3pvap190 	/home/webdep	Rapid Connect - Authcore	GBS	Howe, Thomas (thowe) / Fletcher, Andrew W (afletche)	Mail Sent
+n1pvap005	/home	Cls_Loop PBC (Prepaid Business Center)	NSS	Pridgeon, Peter A (ppridgeo)	Owner want to continue with /home/<users>, as there are going to decommission the server by mid-year and replacing with new servers with additional resource.
+n3bvap995	/home	Cls_Loop PBC (Prepaid Business Center)	NSS	Pridgeon, Peter A (ppridgeo)	Owner want to continue with /home/<users>, as there are going to decommission the server by mid-year and replacing with new servers with additional resource.
+s1bvdb992	/export/home	IRS (Interchange Reporting System)	NSS	Scherer, Laura C. (scherec)	Mail sent
+r3cvap1093	/home	NSS (Star Station)	NSS	Irwin, David K. (irwindk)	Mail sent
+r3cvap1094	/home	NSS (Star Station)	NSS	Irwin, David K. (irwindk)	Mail sent
+n3pvap1038	/home	ISPS (Integrated Suspense Processing System) Debit	GBS	"Robison, Holly F. (hrobiso) / Van Riper, Steven C (svanripe)
+"	Mail sent
+n1bvap1022	/home	ISPS (Integrated Suspense Processing System) Debit	GBS	"Robison, Holly F. (hrobiso) / Van Riper, Steven C (svanripe)
+"	Mail sent
+s3pvdb016	/export/home	IRS (Interchange Reporting System)	NSS	Scherer, Laura C. (scherec)	Mail sent
+n3pvap273	/home/webdep				
+a1pvap153	/home				
+a1pvap154	/home				
+r3pvap1358	/home				
+r3pvap1359	/home				
+r3pvap1360	/home				
+r3pvap1361	/home				
+r1pvap1499	/home				
+r1pvap1500	/home				
+r1pvap1501	/home				
+r1pvap1502	/home				
+n1pvap180	/home				
+n1pvap185	/home				
+n3pvap193	/home				
+n3pvap198	/home				
+n3pvap1019	/home				
+n3pvap1020	/home				
+n1bvap1012	/home				
+n1bvap1013	/home				
+r1pvap1304	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1305	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1306	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1307	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1308	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1309	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1312	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1313	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1314	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1315	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1316	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1317	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r1pvap1318	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1217	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1218	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1219	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1220	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1221	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1222	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1223	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1224	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1225	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1226	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1227	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1228	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	
+r3pvap1229	/home/webdep	Open Loop CMS (Card Management System)	NSS	Bandlamudi, Eshwar K	

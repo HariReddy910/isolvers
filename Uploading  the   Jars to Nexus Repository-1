@@ -1,0 +1,40 @@
+                                     Uploading  the   Jars to Nexus Repository
+
+Step1: Login the below Nexus repository link with Username and Password.
+                 Username : admin
+                 Password : escm123
+         http://s1qvap952.1dc.com:8081/nexus/index.html#welcome
+ 
+Step2:  Click on Repositories ----> 3rd party  as shown in the  below page.
+ 
+
+
+
+
+
+Step3: Click on “Artifact Upload”   tab to upload the jars and poms.
+ 
+Step4:  If you would prefer to set the Group, Artifact, and Version from a POM file associated with the uploaded artifact, select From POM in the GAV Definition drop-down. Selecting From POM in this drop-down will expose a button labelled "Select POM to Upload". Once a POM file has been selected for upload, the name of the POM file will be displayed in the form field below this button
+ 
+
+
+
+
+
+
+And click on “select artifact upload “ button to upload the jars.
+ 
+The Artifact Upload panel supports multiple artifacts with the same Group, Artifact, and Version identifiers. For example, if you need to upload multiple artifacts with different classifiers, you may do so by clicking on Select “Artifact(s) for Upload” and Add Artifact multiple times.
+Finally click on “Upload Artifact(s) “ .
+ 
+
+
+
+
+See the below screenshot , Artifacts uploaded successfully.
+ 
+
+Step 5: Need to upload all  the jars to Maven directory in CA SCM Harvest. See the below screenshot .
+ 
+
+Thank you

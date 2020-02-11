@@ -1,0 +1,103 @@
+Getting started with Git (Git-Bash)
+Environment Setup
+Before we can get started we need to have our development environment setup correctly. The easiest way to do this is to use the batch file from Automated Environment Setup. Before continuing with this guide you'll need to have a working git-bash and ensure you have logged in to the firewalls.
+Git Commands
+clone
+ 
+Before we can do anything else we need to download a copy of the source code from the Stash. In git terminology this is called a clone. Open a git-bash window and cd to the directory you want to store your projects in. Once there, we need to run the following command:
+git clone ssh://git@escmstash.1dc.com:7999/~fbqo4gu/gfs-ecs-client.git
+cd gfs-ecs-client
+TODO: Replace this with the GFSDD url once the repo is migrated.
+
+
+
+
+
+checkout
+ 
+Once we have the source code we need to decide what branch to work with. A branch in git is a separate workspace where you can work without interference from other development. Once your task is complete you then merge the branch back into the main one (explained later). The current plan for eCS is to use the git flow branching style or something similar to it. Check the previous link for more details on the different types of branches involved in this model. To checkout an existing branch with the name 'bugfix/mobilepath' we run the following:
+git checkout bugfix/mobilepath
+If we need to make a new branch instead we run a very similar command:
+git checkout -b feature/mqbackend
+Now that you're on your own branch you're free to make any commits needed to accomplish your task.
+ 
+
+
+
+
+
+
+status, add, rm, commit
+ 
+Now that you've made the needed changes you need to commit the result so git will keep track of it. You don't have to wait until you've completely finished to make a commit, in fact this is discouraged. In the git ecosystem the motto is "commit early, commit often". This is because commits in git are very cheap but they make it easier for both you and git to understand all of the steps involved in a change. If you try five different ways to fix a problem but only commit the one that works you've lost the information about those other changes. If one of them ends up being the needed solution you'll have to try to remember how to recreate it. If you instead commit each time you complete and test a solution you'll have all of them available in the history to reference.
+One somewhat odd difference between git and other VCS/SCM tools is that making a change isn't enough, you also have to tell git about it. If we check the status we can see this in action:
+git status
+As a part of the status message git will suggest commands you can use to add or remove changes from a commit. The commands you can use for this are:
+git add <path/to/file>
+git rm <path/to/file>
+git checkout -- <path/to/file>
+ 
+This allows you to split up your changes into multiple commits by only telling git about part of them for each commit. You can even make multiple commits out of changes to a single file using more advanced versions of these commands. For now, let's just go ahead and add our changes and commit them. To do so we add/rm the files we want in this commit then run:
+git commit
+This will open a text editor to allow you to write a commit message. These messages should describe what you've changed and, if not obvious, why you've done so. The default text editor used will probably be vi/vim which can be tricky to use if you're not familiar with it. To start editing you have to press 'i' then after writing your message you press 'Esc' to leave insert mode and type ':wq' to issue a write and quit command. This will trigger git to write the commit using the message provided. If this editor is not to your taste you can configure git to use any you want.
+ 
+ 
+
+
+
+
+
+
+
+
+
+log, diff
+ 
+As you make your commits it can be useful to review the history of your changes so you can see what you've already done and what is left to do. You can see the messages for commits made by looking at the log:
+git log
+Every commit has a unique id as well as the author, date it was made, and the commit message. You can use these unique ids to refer to and manipulate existing commits. You can see the changes made in a commit or series of commits by running the following:
+git diff <first commit id>..<second commit id>
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+revert
+ 
+If you decide a commit was incorrect and want to remove it instead of manually doing so and making a new commit you can revert it:
+git revert <commit id>
+This will make a new commit that reverts that one and open your editor so you can write a message explaining why you're doing the revert. You can do this on older commits as well, they don't have to be the latest commit you've made.
+ 
+ 
+ 
+ 
+ 
+
+
+push
+ 
+Once you have enough changes done you want to share them with others for review and collaboration you need to push your changes back to the Stash. For a branch that already existed this is as simple as running:
+git push
+When you are pushing a new branch for the first time things are slightly more complicated. Don't worry if you forget, if you try a normal push git itself will actually suggest the correct command to use which is:
+git push --set-upstream origin <branch name>
+After the first push with this command you can use the normal push in the future. Once the push is complete others will be able to pull your changes on to their computer and work with them.
+Note: If using the git-flow style you'll never push any of your changes directly to the 'develop' or 'master' branches. You will have your own branch for those changes and after review either use the Stash tools to merge a Pull Request or use the git merge tools to do it manually.
+pull
+As mentioned in the previous section the way to update your local git repository with the latest changes others have made is to use the pull command:
+git pull
+This doesn't just update the current branch you're on but all of them, as well as getting the information for any new branches others have created. Ideally this is all that is needed and the pull completes without issue. If multiple people are working on one branch though git may not be able to automatically merge the differences together and you'll have a merge conflict. These can be quite complicated to solve so rather than try to explain here you should instead reference this github guide as well as the official git documentation and even google results for your specific kind of conflict. Once you gain experience dealing with conflicts you'll recognize the way they can happen and how to solve them without much effort.
+merge
+ 
+If you've been working on a branch long enough you might need to add the latest changes to master to it in order to ensure things still work or to deal with some change in a DB schema or other external resource. You might also want to bring in the changes from a colleague's branch to test the combined result before trying to get your changes accepted for QA or production. The way you combine branches together is called a merge.
+Merging branches in git is very straightforward, you just checkout the branch you want to merge things in to and then tell it to merge the other branch:
+git checkout feature/example
+git merge master
+This will merge the latest commits from the 'master' branch in to the 'feature/example' branch. Always make sure you're on the correct branch when you start a merge operation, otherwise you'll merge things in the wrong order or merge the wrong branches entirely. Most merges should automatically resolve with either a simple fast-forward or an automatic merge commit. In some instances you will get a merge conflict which will need to be manually resolved. Just like with a pull, you should reference this github guide as well as the official git documentation for help resolving these conflicts. In fact, the process will be identical to resolving the pull case as the pull is technically just doing a merge but with the latest Stash version of the branch rather than a different branch.
+Note: It's generally considered bad practice to regularly merge branches. Ideally the only branches that would be getting any merges would be the 'master' and 'develop' branches while the ones you actually work on would be created, live a short period while work is being done, get merged in to 'develop', then get deleted. This isn't always possible however as sometimes you have two features you need to ensure work together so must merge between each other or your branch is long lived enough to need merges from 'develop' to ensure it stays in sync for proper testing and to make the final merge back to 'develop' simpler.
+

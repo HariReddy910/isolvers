@@ -1,0 +1,44 @@
+1.	SCM 
+Vdeploy
+
+Run-time deployment script in all Flex servers : Vdeploy Project Level
+
+Below is a high level steps to use this script sync related objects based on specific project and environment.
+
+Usage:
+1.	Login through you own account, example below is f9mych5.
+Input the command “Vdeploy FPR1 SIT” 
+
+FPR1 can be replaced by other project, like FBAU, FPR1, and SIT can be replaced by other environment/level, like UAT.
+2.	If you’re the authorized person to run this script, output like below will be displayed.
+3.	If you’re not the authorized person, an error message will be displayed.
+
+ 
+Vdeploy script details:  
+Example Vdeploy.log :  
+log file path: /var/log/vdeploy.log
+
+
+Example:
+Create two members TEST01/TEST02 in SDK PSIT (project) for SIT fast fix then edit and compile them
+ 
+ 
+ 
+Now we have 2 members in Project:PSIT Level:DEV
+ 
+Then logon SIT putty: 10.102.18.21 and run command : Vdeploy PSIT DEV
+ 
+We can see the TEST01.JCL and TEST02.JCL has shown to sending.
+Once the Vdeploy command completed the members in SDK PSIT project DEV level has sync to SIT server:10.102.18.51 temp jcllib
+ 
+The script will check the difference between two servers and sync those different members.
+If I delete member TEST01 in SDK
+ 
+ 
+Then run script
+ 
+We can see the TEST01.JCL has also been deleted in SIT server
+ 
+If i updated member TEST02 then run the script member will also be sync to SIT server .
+ 
+ 

@@ -1,0 +1,36 @@
+Kindly find the installation procedure followed for the change CR921433  (North FE Compliance) .
+
+Whenever you find the A1 (omaha servers) follow the below steps :
+
+	Generate separate username and password for both jumpserver (A3DVAP980) and impacted server (a1pvap072) in TPAM .
+
+	Login into A3DVAP980 - Jump server using the username and password generated from TPAM .
+
+	Then type ssh -l <TPAM_ID> <Impacted Server>
+
+	Enter the password generated for impacted server from TPAM
+
+	Once logged in then enter su - prodopr (ID given in change) . If password is not prompted , you’re lucky 
+
+	Enter the password for the user prodopr (mostly will be provided by app team)
+
+	Make sure you have logged in the right server with the right user before running any commands .     
+
+    
+
+
+	Now execute install_nash
+
+	Give Y for three times and you should be able to See/Review of the log . 
+
+	Press spacebar until the log reaches 100% of the log file .
+
+	Inform the team that installation is complete and wait for the startup . 
+
+	After confirmation from the app team , execute cardnet_startup
+
+	Wait for the validation and mark the CR status as per the scenarios .
+
+
+Important Note : Execute the commands as per the instructions in the I-Plan .
+

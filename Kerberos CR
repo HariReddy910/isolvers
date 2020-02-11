@@ -1,0 +1,17 @@
+
+Kerberos CR
+TMDSM Instructions
+ 
+1) login to n9pvap002.1dc.com as release user : 
+    sudo su – release
+    kinit -f (userid)
+  1.1) create FI playground
+    mkdir /mesa/release.PSBAIA
+    cd /mesa/release.PSBAIA
+    mkdir logs 
+  1.2) untar new code
+     unzip /mesa/octars/IMP-74/module.zip
+
+
+
+ 

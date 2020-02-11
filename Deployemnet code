@@ -1,0 +1,221 @@
+<manifest>
+  <component component_id="nss_po">
+    <file file_type="common" />
+    <file file_type="environment" />
+    <file file_type="system" />
+    <file file_type="tree">
+      <file_path>deployments</file_path>
+    </file>
+    <file file_type="type" />
+    <command command_type="command_system">
+      <environment environment_id="ESCM_NSS_PO_CERT">
+        <system system_id="R3CVAP1093">
+          <state state_id="pre_install">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_c01" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_c01" />
+            <execute module="Backout" action="Backup" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c01/,tree,deployments" />
+          </state>
+          <state state_id="install">
+            <execute module="Transfer" action="Transfer" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c01/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c01/,tree,deployments,websrvr,web,0775" />
+          </state>
+          <state state_id="post_install">
+            <execute module="Jboss" action="StartInstance" argument="nsspar_c01" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_c01" />
+          </state>
+          <state state_id="backout">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_c01" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_c01" />
+            <execute module="Backout" action="Restore" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c01/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c01/,tree,deployments,websrvr,web,0775" />
+            <execute module="Jboss" action="StartInstance" argument="nsspar_c01" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_c01" />
+          </state>
+        </system>
+        <system system_id="R3CVAP1094">
+          <state state_id="pre_install">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_c02" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_c02" />
+            <execute module="Backout" action="Backup" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c02/,tree,deployments" />
+          </state>
+          <state state_id="install">
+            <execute module="Transfer" action="Transfer" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c02/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c02/,tree,deployments,websrvr,web,0775" />
+          </state>
+          <state state_id="post_install">
+            <execute module="Jboss" action="StartInstance" argument="nsspar_c02" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_c02" />
+          </state>
+          <state state_id="backout">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_c02" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_c02" />
+            <execute module="Backout" action="Restore" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c02/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_c02/,tree,deployments,websrvr,web,0775" />
+            <execute module="Jboss" action="StartInstance" argument="nsspar_c02" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_c02" />
+          </state>
+        </system>
+      </environment>
+      <environment environment_id="ESCM_NSS_PO_DEV">
+        <system system_id=" ">
+          <state state_id="pre_install">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_d01" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_d01" />
+            <execute module="Backout" action="Backup" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d01/,tree,deployments" />
+          </state>
+          <state state_id="install">
+            <execute module="Transfer" action="Transfer" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d01/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d01/,tree,deployments,websrvr,web,0775" />
+          </state>
+          <state state_id="post_install">
+            <execute module="Jboss" action="StartInstance" argument="nsspar_d01" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_d01" />
+          </state>
+          <state state_id="backout">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_d01" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_d01" />
+            <execute module="Backout" action="Restore" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d01/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d01/,tree,deployments,websrvr,web,0775" />
+            <execute module="Jboss" action="StartInstance" argument="nsspar_d01" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_d01" />
+          </state>
+        </system>
+        <system system_id="r3dvap1189">
+          <state state_id="pre_install">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_d02" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_d02" />
+            <execute module="Backout" action="Backup" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d02/,tree,deployments" />
+          </state>
+          <state state_id="install">
+            <execute module="Transfer" action="Transfer" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d02/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d02/,tree,deployments,websrvr,web,0775" />
+          </state>
+          <state state_id="post_install">
+            <execute module="Jboss" action="StartInstance" argument="nsspar_d02" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_d02" />
+          </state>
+          <state state_id="backout">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_d02" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_d02" />
+            <execute module="Backout" action="Restore" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d02/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_d02/,tree,deployments,websrvr,web,0775" />
+            <execute module="Jboss" action="StartInstance" argument="nsspar_d02" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_d02" />
+          </state>
+        </system>
+      </environment>
+      <environment environment_id="ESCM_NSS_PO_QA">
+        <system system_id="R1QVAP1339">
+          <state state_id="pre_install">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_q01" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_q01" />
+            <execute module="Backout" action="Backup" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q01/,tree,deployments" />
+          </state>
+          <state state_id="install">
+            <execute module="Transfer" action="Transfer" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q01/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q01/,tree,deployments,websrvr,web,0775" />
+          </state>
+          <state state_id="post_install">
+            <execute module="Jboss" action="StartInstance" argument="nsspar_q01" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_q01" />
+          </state>
+          <state state_id="backout">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_q01" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_q01" />
+            <execute module="Backout" action="Restore" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q01/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q01/,tree,deployments,websrvr,web,0775" />
+            <execute module="Jboss" action="StartInstance" argument="nsspar_q01" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_q01" />
+          </state>
+        </system>
+        <system system_id="R1QVAP1341">
+          <state state_id="pre_install">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_q02" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_q02" />
+            <execute module="Backout" action="Backup" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q02/,tree,deployments" />
+          </state>
+          <state state_id="install">
+            <execute module="Transfer" action="Transfer" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q02/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q02/,tree,deployments,websrvr,web,0775" />
+          </state>
+          <state state_id="post_install">
+            <execute module="Jboss" action="StartInstance" argument="nsspar_q02" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_q02" />
+          </state>
+          <state state_id="backout">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_q02" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_q02" />
+            <execute module="Backout" action="Restore" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q02/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_q02/,tree,deployments,websrvr,web,0775" />
+            <execute module="Jboss" action="StartInstance" argument="nsspar_q02" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_q02" />
+          </state>
+        </system>
+      </environment>
+      <environment environment_id="ESCM_NSS_PO_UAT">
+        <system system_id="R3TVAP1002">
+          <state state_id="pre_install">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_u01" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_u01" />
+            <execute module="Backout" action="Backup" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u01/,tree,deployments" />
+          </state>
+          <state state_id="install">
+            <execute module="Transfer" action="Transfer" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u01/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u01/,tree,deployments,websrvr,web,0775" />
+          </state>
+          <state state_id="post_install">
+            <execute module="Jboss" action="StartInstance" argument="nsspar_u01" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_u01" />
+          </state>
+          <state state_id="backout">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_u01" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_u01" />
+            <execute module="Backout" action="Restore" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u01/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u01/,tree,deployments,websrvr,web,0775" />
+            <execute module="Jboss" action="StartInstance" argument="nsspar_u01" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_u01" />
+          </state>
+        </system>
+        <system system_id="R3TVAP1003">
+          <state state_id="pre_install">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_u02" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_u02" />
+            <execute module="Backout" action="Backup" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u02/,tree,deployments" />
+          </state>
+          <state state_id="install">
+            <execute module="Transfer" action="Transfer" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u02/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u02/,tree,deployments,websrvr,web,0775" />
+          </state>
+          <state state_id="post_install">
+            <execute module="Jboss" action="StartInstance" argument="nsspar_u02" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_u02" />
+          </state>
+          <state state_id="backout">
+            <execute module="Jboss" action="StopInstance" argument="nsspar_u02" />
+            <execute module="Sleep" action="TimeToWait" argument="120" />
+            <execute module="Jboss" action="IsStopped" argument="nsspar_u02" />
+            <execute module="Backout" action="Restore" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u02/,tree,deployments" />
+            <execute module="File" action="ChangeAllAttributes" argument="/appserver/wildfly-9.0.2.Final/server/nsspar_u02/,tree,deployments,websrvr,web,0775" />
+            <execute module="Jboss" action="StartInstance" argument="nsspar_u02" />
+            <execute module="Jboss" action="IsStarted" argument="nsspar_u02" />
+          </state>
+        </system>
+      </environment>
+    </command>
+  </component>
+</manifest>

@@ -1,0 +1,143 @@
+NSS_TR
+NSS_TR_APPSCAN
+NSS_TR_BUGFIX_V1
+
+EVOLVE_SQRP_APP
+FDVS-CORE_ALARMPROCESSORS_SVCAPP
+
+
+
+------------------------------------------------------------
+
+NSS_TR_APPSCAN
+
+git clone ssh://f3oy0or@n3pvap1003.1dc.com:29418/NSS_TR
+
+cd NSS_TR
+
+git remote remove origin
+
+git checkout -b NSS_TR_APPSCAN
+
+git remote add origin ssh://git@escmstash.1dc.com:7999/nss/nss_tr.git
+
+
+git push origin NSS_TR_APPSCAN
+
+
+
+
+096038005021019056061091117
+ssh://git@escmstash.1dc.com:7999/nss/nss_tr.git
+
+
+--------------------------------------
+
+r1qvap1107
+cd /escm/acm/boot
+sh portingstatus.ksh EVOLVE_SQRP_APP
+cd /escm/acm/acm_agent/agent/main
+
+
+CL-VLINK_BOT_APP	
+
+--------------------------------------
+n3pvap1003
+
+cd /opt/escm/repos
+ls NSS_TR.git
+rm -rf NSS_TR.git
+
+
+hvt-escmHarvest
+hvt-w1pvap037
+hvt
+
+ls CL-SVCS_NGN_HELPDESK.git
+
+
+--------------------------------
+
+
+
+Login gerrit server – n3pvap1003
+ dzdo su – webdep
+ cd /opt/escm/repos
+ ls –ltr <applicationName>
+ mv <applicationName> InactiveProjects/
+
+ 
+ 
+  CAIDM_APAC.git/ CAIDM_EMEA.git/ CAIDM_LAC_BRAZIL.git/ CAIDM_NA_EXTERNAL.git/ CAIDM_NA_INTERNAL.git/ CARCM_APP.git/ CL2_DB_EUR.git/ CL2_DB_NORTH.git/ CL2_DB_OMN.git/ CL2_UNIX_EUR.git/ CL2_UNIX_NORTH.git/ CL2_UNIX_OMN.git/ CONSOLEMGR_BOARDING_SNAP_GSB.git/ CORPINET.git/ CORPINET_ACCTSRECEIVABLE.git/ CORPINET_AMEX.git/ CORPINET_BAMSEXPENSEPAYMENT.git/ CORPINET_BLOOMBERG.git/ CORPINET_CASHINOUT.git/ CORPINET_CATEGORYDATA.git/ CORPINET_COMMONS.git/ CORPINET_CORE.git/ CORPINET_EMPLOYEEPROFILE.git/ CORPINET_EMPLOYEERATING.git/ CORPINET_HREMPLOYEEDATA.git/ CORPINET_HRONBOARDING.git/ CORPINET_HRRECRUITMENTC.git/ CORPINET_HRRECRUITMENTH.git/ CORPINET_MANAGERPROFILE.git/ CORPINET_PAYFILETRANSMISSION.git/ CORPINET_PAYSTUB.git/ CORPINET_POTRANSMISSION.git/ CORPINET_PREPAIDSETTLEMENT.git/ CORPINET_REFERENCEDATA.git/ CORPINET_RESOURCES.git/ CORPINET_RISKCONTROL.git/ CORPINET_TREASURY.git/ CORPINET_TREASURYSETTLEMENT.git/ SERVICEDESKIMPACTVIEWSCAN_APP.git/ SOBAL_FORMULAS.git/ SOBAL_IMAGE.git/ SOBAL_SERVER_SCRIPTS.git/ SSD_DASHBOARD.git/ InactiveProjects/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+mv  CAIDM_APAC.git/CAIDM_EMEA.git/CAIDM_LAC_BRAZIL.git/CAIDM_NA_EXTERNAL.git/CAIDM_NA_INTERNAL.git/CARCM_APP.git/CL2_DB_EUR.git/CL2_DB_NORTH.git/CL2_DB_OMN.git/CL2_UNIX_EUR.git/CL2_UNIX_NORTH.git/CL2_UNIX_OMN.git/CONSOLEMGR_BOARDING_SNAP_GSB.git/CORPINET.git/CORPINET_ACCTSRECEIVABLE.git/CORPINET_AMEX.git/CORPINET_BAMSEXPENSEPAYMENT.git/CORPINET_BLOOMBERG.git/CORPINET_CASHINOUT.git/CORPINET_CATEGORYDATA.git/CORPINET_COMMONS.git/CORPINET_CORE.git/CORPINET_EMPLOYEEPROFILE.git/CORPINET_EMPLOYEERATING.git/CORPINET_HREMPLOYEEDATA.git/CORPINET_HRONBOARDING.git/CORPINET_HRRECRUITMENTC.git/CORPINET_HRRECRUITMENTH.git/CORPINET_MANAGERPROFILE.git/CORPINET_PAYFILETRANSMISSION.git/CORPINET_PAYSTUB.git/CORPINET_POTRANSMISSION.git/CORPINET_PREPAIDSETTLEMENT.git/CORPINET_REFERENCEDATA.git/CORPINET_RESOURCES.git/CORPINET_RISKCONTROL.git/CORPINET_TREASURY.git/CORPINET_TREASURYSETTLEMENT.git/SERVICEDESKIMPACTVIEWSCAN_APP.git/SOBAL_FORMULAS.git/SOBAL_IMAGE.git/SOBAL_SERVER_SCRIPTS.git/SSD_DASHBOARD.git/
+
+ 
+ 
+ 
+ 
+ 
+caidm_apac
+caidm_emea
+caidm_lac_brazil
+caidm_na_external
+caidm_na_internal
+carcm_app
+cl2_db_eur
+cl2_db_north
+cl2_db_omn
+cl2_unix_eur
+cl2_unix_north
+cl2_unix_omn
+consolemgr_boarding_snap_gsb
+corpinet
+corpinet_acctsreceivable
+corpinet_amex
+corpinet_bamsexpensepayment
+corpinet_bloomberg
+corpinet_cashinout
+corpinet_categorydata
+corpinet_commons
+corpinet_core
+corpinet_employeeprofile
+corpinet_employeerating
+corpinet_hremployeedata
+corpinet_hronboarding
+corpinet_hrrecruitmentc
+corpinet_hrrecruitmenth
+corpinet_managerprofile
+corpinet_payfiletransmission
+corpinet_paystub
+corpinet_potransmission
+corpinet_prepaidsettlement
+corpinet_referencedata
+corpinet_resources
+corpinet_riskcontrol
+corpinet_treasury
+corpinet_treasurysettlement
+servicedeskimpactviewscan_app
+sobal_formulas
+sobal_image
+sobal_server_scripts
+ssd_dashboard
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

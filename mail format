@@ -1,0 +1,1379 @@
+Hi Durairaj,
+
+This is regarding CAT  CR CRQ000000141869 which was scheduled at 12.30 AM .
+
+Window time has already been started. Please  update us so that we can proceed with deployment.
+
+
+
+Peter,
+
+Could you pls approve latest baseline FDINET_MYFD_190321131511 for MyFD Prod deployment under CRQ000000140234.
+
+Hi Imon,
+I have provided build access to your lan id in ACM for the component tasq-orderprintserver_app.
+
+Hi David,
+
+Auto CM Build and Deploy part of initial on boarding request has been tested successfully in DEV environment. Please let me know if below SR# request is still valid for QA and PROD setup. 
+It is assigned to Rajesh Chellaswamy and I am not able to reach him.
+
+Hi Usha/Queenmary,
+
+The following components are failing due to auto cm porting issue (Failed to checkout files). please look into this issue and update ASAP.
+
+Hi Deepak,
+
+I have created the following repositories “XmlCollLoader”, “BnkStmtLoader” under “IMAGING_UAID-00002” project and provided to you the admin access.
+
+Hi Abhi,
+
+I have raised ticket. Please find the details REQ000002707722. Please let us know in case of anything required.
+
+Hi Muthu,
+
+Normally the installation parts are handled by architect team.
+Could you please contact them for the below installations.
+
+Hi,
+
+CRQ000000141647 is scheduled for 8:30 A.M IST and its window time is 4 hours. Please contact X2GDS_DistAppDeploy for deployment assistance.
+
+
+Hi Kumari
+
+Below mentioned CR# CRQ000000137000 have approved from our end
+
+
+
+Hi Manickavalli,
+
+The space has been cleared. Please proceed with the build.
+
+
+Hi Manickavalli,
+
+The space has been cleared. Please proceed with the build.
+
+
+Hi Vivek,
+
+CR# has been approved from  X2GDS_DistAppDeploy.
+
+
+
+Hi,
+
+CRQ000000141844 is scheduled for 6:30 A.M IST tomorrow and its window time is 5 hours. Please update the baseline details as the validation is failed.
+
+
+Hi Anup,
+
+The subjected CR# window time has been elapsed.
+
+So we are closing the task. For any deployment, please create new CR or IR and let us know.
+
+Thanks!!
+Karthik
+
+
+Hi Team,
+
+Please find the bash script createrepo.sh and sample list.txt file attached for creating bulk repositories(empty) under a specific project in STASH. 
+
+It’s time saving and can create N number of empty repositories under a specified project.
+
+Method Used:
+Stash Rest API
+
+Requisites:
+   1.    Git Bash installed
+   2.    Save the script and list.txt file under the same path. 
+   3.    Copy the components from excel sheet assigned to you and paste it in list.txt
+
+Inputs needed to be modified in createrepo.sh before running:
+1.	Your Lanid, Password
+2.	Project Name in the URL specified
+
+I have tested the same in test projects and looks good. Please let me know for any concerns/clarifications.
+
+Thanks,
+Srinivasan Ravi 
+
+Hi Chakrabarti
+
+I will support for the mentioned respective CR
+
+
+Hi Adam ,
+
+Thanks for the update .
+
+Can you please get approve pending onboarding tickets from your LM ,So that we can setup ACM projects accordingly.
+
+Thanks and Regards
+Narendra
+
+Hi Team,
+         
+   I have added some more components to the initial excel sheet shared by Bharath Kumar.  
+   So, download this  updated excel sheet and continue to add the remaining projects and share it across team once you are done with your work .
+
+   
+Hi Team,
+
+As discussed over the call with Karthik about the ESCM_360CONTROL_NEWEMEAUAT deployment , I have made several changes in deployment script.
+PFA updated script which is  uploaded  in ACM. 
+
+As discussed through moc
+
+We have updated the script for CAT,DR,INTG,PROD environments.PFA for your reference.
+The script has been uploaded in ACM.
+Please try deployment and let us know.
+
+
+The below properties added in script
+
+<key key_name="WL_USER_CONFIG_FILE" key_value="/appserver/tmdsm/user.properties" />
+<key key_name="WL_ADMIN_USER" key_value="webdep" />
+<key key_name="WL_ADMIN_PASSWD" key_value="001009092006061003040009126002" />
+
+Along with some changes in build , The deployment has been completed successfully .
+
+https://autocm.1dc.com/acm_xgui/site/status/LogView.aspx?dbid=646413
+
+As per the requirement we have to change the server id’s and check the deployment.
+
+replace “root” with “websrvr” in all places in Web servers only.
+
+Hi,
+
+This is to inform you that I am not able to login in BitBucket and also unable to pull updates from Eclipse.
+It seems like my account got locked due to some reason.
+Can you please do the needful to resolve the issue?
+
+Please find the screenshots  in mail.
+
+
+Hi,
+
+Atlassian accounts usually are locked out after multiple failed logins/change in passwords. It works on solving a captcha. The issue is resolved now.
+
+Thanks,
+Srinivasan Ravi
+
+
+
+
+Hi all,
+
+I have marked inactive for all the 192 components in the excel sheet. See the attachment for ur reference.
+Regards,
+
+
+
+Hi Team, 
+
+PFA spreadsheet  Complete consolidated information gathered by me, Krishna and Vaishnavi.
+
+
+
+
+Hi Priyanka,
+
+PFA deployment manifest with the updated servers.
+
+Please verify target path and other arguments once and let us know.
+
+Attached deploy xml is already been updated in ACM, if the manifest file has no changes, you can proceed with the deployment and let us know if you find any issues.
+
+
+
+Hi Bala & Team,
+
+We are facing below issue while AutoCM deployment :-
+
+WASX7023E: Error creating "SOAP" connection to host "r1cvap1021"; exception information: com.ibm.websphere.management.exception.ConnectorNotAvailableException: [SOAPException: faultCode=SOAP-ENV:Client; msg=Error opening socket: java.lang.NoClassDefFoundError: com.ibm.jsse2.M (initialization failure); targetException=java.lang.IllegalArgumentException: Error opening socket: java.lang.NoClassDefFoundError: com.ibm.jsse2.M (initialization failure)]
+WASX7213I: This scripting client is not connected to a server process; please refer to the log file /appserver/WebSphere/AppServer/profiles/AppSrv01/logs/wsadmin.traceout for additional information.
+WASX8011W: AdminTask object is not available. 
+
+Looks like DMGR needs to re-started, raised INC000001126323 for the same.
+App Name - reprieve_app 
+Processing websphere file: clogo-restful-0.0.1-SNAPSHOT.war 
+
+Let us know if any more info is required.
+
+
+Hi Team,
+
+Status of the Migration attached here. Next shift guys please continue from here.
+
+
+Hi Team,
+
+The Gerrit server slowness issue has been fixed with the help of Tim and now Gerrit server working fine, so we can start the migration.
+
+RCA for Slowness: while migrating the Gerrit server getting slowness due to a lot of PG(postgres) threads running in gerrit server after restarted postgres and its  working normally.
+
+Hi Parthiban,
+
+As discussed over the call, I have made EMSGR_* components back to Active in Harvest. 
+
+Let us know once you are done taking necessary files out of this project, so that we will go ahead and mark it Inactive.
+
+
+Hi Team,
+
+Status of the Migration attached here. Next shift guys please continue from here.
+
+Thanks..!!
+
+
+Hi Ankit,
+
+The CRQ000000149089 window is started already(Start: 4/111/2019 2:00:00 PM IST) and we are waiting for the deployment process to get started.
+Please let us know who will be supporting the CR#  from the application team!
+
+
+Hi Nandan,
+
+
+While validating this CR, we are facing  an issue with validation status seems like  failed. Please update the correct Environment ID and Baseline in Remedy. 
+
+
+Hi Queen/ Usharani,
+
+648173 deployment went through the r3pvap1070 agent and got struck at 5% . I  killed this 648173  dbid. But I Autocm still it is in work state.
+Please check this dbid is killed or not when the agent is up.
+
+
+Also Kill the below dbid when  server is up.
+
+648174
+648177
+648184
+648201
+
+Regards,
+Pallavi
+
+
+Hi Boarding Team,
+
+This CRQ000000153251 is going first time through ACM, Can you please take care of that.
+
+
+Start: 4/23/2019 10:30:00 AM
+End: 4/27/2019 10:30:00 AM
+Target Environment: ESCM_AFDS_UI_DR
+
+Baseline Set: AFDS-UI_190415094237
+
+Jira Ticket also raised for same, SR-4043
+
+Hi Avijit,
+
+We have reached Change Coordinator - Soumita.Bose@firstdata.com as well as we have dropped a mail regarding the CR Schedule. Attached the same with this mail.
+
+As the CR window has already crossed, please raise Incident to work on the deployment. 
+
+Hi Team,
+
+We had two CRs today (PROD/DR) [CRQ000000150431and CRQ000000150443] scheduled at 12 noon. But, there was no communication from your team. The CR window has already crossed and the application did not get released.
+
+Hi Bose,
+
+This is regarding CR’s of (CRQ000000147487& CRQ000000147615) are scheduled for 12:00 P.M IST today and its window time is 3 hours. But there was no communication from your team,Please connect X2GDS_DistAppDeploy / TMDSM Team for deployment for deployment  .
+
+
+Hi Pallavi ,
+
+We have checked space,webdep & ssh connectivity for s3pvdb029 (only one server under PROD) and s1bvdb987(only one server under DR) ,everything looks good.
+
+Also, verified the deployment path ( /prod/tmrs/jar/tclib ) is  present on the respective servers  s3pvdb029 and s1bvdb987 .
+
+Thanks,
+Bharath Kumar .Ch
+
+
+Hi Kishi,
+
+The CRQ000000162156 window is started already(Start: 5/14/2019 9:30:00 AM IST) and we are awaiting for the deployment process to get started.
+Please let us know who will be supporting for the subjected CR#  from the application team!
+
+
+Hi Supraja
+
+I have provided Build & Deploy Access for LanID ‘f3nh5av’ , Kindly validate and confirm.
+
+
+
+Hi All,
+
+As a process of continuous improvement , Stash is been recommended over Harvest tool as it is going to be sunset very soon, henceforth support on Harvest is not feasible  
+
+As the below LASER  application available in Harvest, please let us know if we can make the below list of components and its branches inactive in Harvest or you would like to move Harvest code Stash.
+
+Component Id
+LASER_MAI_CTRLFILES
+LASER_MAI_SETTINGS
+LASER_MAI_SHELL
+LASER_REPOSITORY_CTRLFILES
+LASER_REPOSITORY_SETTINGS
+LASER_REPOSITORY_SHELL
+LASER_RMW_CTRLFILES
+LASER_RMW_SETTINGS
+LASER_RMW_SHELL
+
+This component is available in gerrit.We are planning to push it into stash as harvest is going to sunset before end of June
+
+
+Hi Mary
+
+As a part of CR# CRQ000000165075, scheduled on 5/20/2019 6:30:00 AM , But while validating it get failed due to in “OL_WB_ONBOARDING” Deployment Script with respect to specified environment’s script is not available 
+
+Kindly revalidate and let us know
+
+PFB validation FYR
+
+Hi Hema,
+
+We will work on the deployment script framing for the below components and confirm back.
+We will get back to you in case of any clarifications needed.
+
+
+
+Hi,
+As a process of continuous improvement, Stash is been recommended over Harvest tool as it is going to be sunset very soon, henceforth support on Harvest is not feasible 
+As both OPLOSS applications available in Gerrit, please let us know if we can make the below list of components INACTIVE in Harvest.
+
+
+Component Name
+OPLOSS_SERVICE
+OPLOSS_TOPSECRETAUTHSERVICE
+
+
+Hi Sathish,
+
+We are porting components from harvest to stash. The Porting running on below listed servers.
+
+W1PVAP1478
+
+W3PVAP1319
+
+W3PVAP1019
+
+We(X2GDS_DistAppDeploy) are not running anything on remaining servers. 
+
+Hi Joshua,
+
+As you are having admin access for all the repos, you can manage the access for other users.
+
+Please check and let us know for any concerns.
+
+Hi Shreetama,
+
+As discussed there were some path changes and workspace changes has to be made in build.sh and build.properties. 
+
+We have provided you admin access for the projects which are under GG-CMNLIB. Please modify the files accordingly and trigger a build, let us know if you find any issues.
+
+Hi Joey/Joshua,
+
+As per the jira request SR-4241, we have created all the repositories in Bit-bucket/Stash.
+
+@Joshua,
+
+You are been given with the Admin access for all the repos. Please check and let us know for any concerns.
+
+Hi Senthil,
+
+Completed the below mentioned changes and also triggered a build after doing that. The DB Id is 669275, but as not able to see the workspace so please check whether the desired changes have been done or not.
+
+Also let me know if any other information needed.
+
+Hi Shreetama,
+
+As discussed there were some path changes and workspace changes has to be made in build.sh and build.properties. 
+
+We have provided you admin access for the projects which are under GG-CMNLIB. Please modify the files accordingly and trigger a build, let us know if you find any issues.
+
+
+Hi All,
+
+The business segment part has been updated for all the servers and the servers are separated according to business segment category.
+
+Please proceed with the creation of ITSR tickets for servers.
+
+PFA
+
+
+Hi Paramita,
+As discussed through moc
+
+We have updated the script for CAT,DR,INTG,PROD environments.PFA for your reference.
+The script has been uploaded in ACM.
+Please try deployment and let us know.
+
+Hi Vishnu,
+
+The issue is resolved. Now I am able to receive Tandem mails.
+
+Hi Manohar,
+
+Can you please confirm us the deployment path? So that we can proceed with replacing the old servers with the new one in the script.
+
+Hi Manohar,
+
+Can you please confirm us the deployment path? So that we can proceed with replacing the old servers with the new one in the script.
+
+
+Hi Paramita,
+
+We have updated the script for CAT,DR,INTG,PROD environments.PFA for your reference.
+The script has been uploaded in ACM.
+Please try deployment and let us know.
+
+Kakarla, Abhinandh (Non-Employee); 
+
+Hi Krishnateja,
+
+We have copied the contents of EMSGR_CSR_REWRITE_180716080803 to new branch EMSGR_CSR_REWRITE_NON_VOLTAGE.
+
+Please validate and let us know so that we can proceed and delete EMSGR_CSR_REWRITE_180716080803 from stash.
+
+As well as we have deleted the below two branches from stash
+
+EMSGR_CSR_REWRITE_181105070904
+EMSGR_CSR_REWRITE_181119020636
+
+Hi Santosh
+
+The CRQ000000164798 Implementation window is Scheduled (Start: 5/23/2019 8:30:00 AM IST) and we are awaiting for the deployment process to get started.
+Please let us know who will be supporting the CR#  from the application team!
+
+CR# @ scheduled state kindly move to ‘Implementation in Progress’
+
+
+Hi Romitava,
+
+The build server issue got resolved just now. Kindly try build.
+
+
+
+
+Hi Anirban,
+
+We are checking on this issue with build server s1qvap952. We will update back once it is resolved.
+
+Hi Johnathan,
+
+Deployment went successful. Please check the logs.
+
+Hi Boarding Team,
+
+As a part of CR# CRQ000000167983,  This Debit_AEM component is going first time through ACM for ESCM_DEBIT_AEM_CAT_FULL environment, Kindly look into it.
+
+PFB implement details FYR
+
+Implementation Window (GMT 5)
+Start: 5/29/2019 10:30:00 AM
+End: 6/4/2019 10:30:00 AM
+
+Deployment Type: AutoCM
+________________________________________
+Target Environment: ESCM_DEBIT_AEM_CAT_FULL
+
+Baseline Set: Debit_AEM_190527091708
+
+
+ESCM_AFDS_UI_PROD, 
+ESCM_AFDS_RULESENGINE_PROD, 
+ESCM_AFDS_RULESENGINE_PROD_FAILOVER, 
+ESCM_AFDS_MAINT_PROD, 
+ESCM_AFDS_MAINT_PROD_FAILOVER
+
+
+
+
+Hi Vani,
+
+We have migrated IRS_DB_020350 as a branch to IRS_DB in Stash, please check the same and let us know if we can mark the Harvest components Inactive.
+
+Hi Saranya,
+
+We are working on the issue, we will update once it is resolved.
+
+Hi Mohammed,
+
+We are checking on this. We will update back once the issue is resolved.
+
+Hi Joshua,
+
+As per FDC policy, we are not suppose to give project level access for developer.
+
+You have to give access  for each  repositories individually.
+
+Regards,
+Pallavi
+
+Hi Tania
+
+As I have seen ACM roll back is failed (DBID: 681288 ) for the below specified CR’s component ‘TASQ-TEAM_BILLING’ , we are working on it .
+
+I have specified previous baseline for rollback, PFB table FYR kindly look into it and confirm.
+
+As due to implementation time expired, Kindly raise an Incident Request or new Change Request to proceed Roll Back(back out) changes so we can proceed further.
+
+Hi On-Board Team
+
+As a part of CR implementation, we have scheduled for deployment it get successful while doing back out it get failed(DBID: 681288 ) , Kindly look into and resolve ASAP .
+
+PFB thread mail FYR 
+
+Hi David,
+
+Myself and Vaishnavi  K are able to login to servers to which we have access.
+
+And also  we could find the extra security question’s authentication step while logging in to servers  except W1PVAP1019.
+
+For W1PVAP1019, we were able to  login without security questions.
+
+
+Hi Lonnie,
+
+As discussed over the  MOC, I have created environment ESCM_BAMS-CADRE_DEV_LIB in Autocm. 
+
+And we checked the path on r3dvap1062. We could not find the path  given by  you : /opt/bams-cadre/bams-cadre_backend_liberty
+
+Hi Manish,
+
+I have changed the status of the below environment to inactive, so that you can’t use this environment anymore. Please do a check from your end.
+
+
+Hi Lonnie,
+
+This is regarding Jira number  SR-4211
+
+Please let us know the component name which you have used to build through AutoCM or Stash repository name .
+
+For first time deployment script in AutoCM. Please raise Jira ticket under onboarding type.
+
+Let us know if you have any concerns.
+
+Regards,
+Pallavi
+
+
+Hi David / Team,
+
+The below requests are completed. Kindly validate and confirm the same.
+
+REQ000002771481
+REQ000002771487
+
+Regards,
+Karthikkumar Krishnasamy
+
+
+Hi All,
+
+I am trying migrate the PayCargo component In harvest I can see two folder having the code. So we need to migrate both folder.
+
+Right click on the  first component and click on “Add WorkArea” and do the same for second component in different folder. Copy the both folder to common folder and start doing with Git command. 
+ 
+Hi,
+
+I see it in JIRA now - I have changed the Epic Link to GCRATL-217, so that it will show up with other AutoCM items in the backlog.
+
+
+Hi Mary ,
+
+The deployment manifest has been updated as mentioned in the mail. Also the script has been uploaded in ACM.
+
+PFA for the script. 
+
+Kindly check and let us know for any concerns.
+
+
+Hi Mary/Vineet,
+
+The below ticket is raised under wrong category.
+
+For Updating the deployment manifest, Kindly raise the jira under “Deployment Manifest update” category.
+
+Let us know once ticket is created and approved.
+
+
+Hi Mary,
+
+PFA the latest deployment manifest for ol_jreports.
+
+Hi Dave,
+
+The real issue is  org.eclipse.jgit.api.errors.TransportException, It is asking SSL verification via Eclipse for git commits (git pull, git push)
+
+After that We fixed that issue into his local machine  we are going to  
+
+Window->Preferences->Team->Git->Configuration
+
+Click the New Entry button after that we will give the below commands than it went successfully committed.
+
+Key = http.sslVerify
+Value = false
+
+Hi Rintu,
+
+Please get this SR – 4443 Jira approval from your LM and provide us if you have a reference Jira number of same issue from your team.
+
+Hi All,
+
+PFA the updated sheet for migration.
+
+NOTE: Kindly follow the manual migration method for  the components `which are not available  in ACM
+
+
+Hi Vani,
+
+As discussed I have made Harvest component IRS_DB_020350 Inactive.
+
+
+Hi Vani,
+
+Thanks for the update.
+
+We have updated AutoCM pointing to Stash repo and made Harvest component Inactive.
+
+Hi Pavan
+
+I have provided for build and deploy access for the specified components to the mentioned end users, kindly check and revert so we can close from our end jira request
+
+
+Hi Kimberly,
+
+For  new repository creation  in stash, please raise jira ticket under Repository - New/Maintenance.
+
+For repository access in stash, Raise  the jira ticket under SCM Tool Access. Let us know which access needed (admin/write/read).
+
+https://escmjira.1dc.com
+
+Project : SCM Request
+Issue type : Repository - New/Maintenance
+
+Regards,
+Pallavi
+
+Hi Biswanath,
+
+As discussed over phone, I am marking the below mentioned Harvest components Inactive as it is no longer in use.
+
+Component ID
+1PAY_AGENTS_DOTNET
+1PAY_DOTNET
+1PAY_PLSQL
+1PAY_SHELLSCRIPT
+1STAR
+
+
+
+Ok. Makes sense.
+
+I will work on it based on schedule.
+
+
+Hi Ram,
+As we discussed over lync, We have created the environments called “ESCM_EI_AOD_D1PPAP1037_CAT, ESCM_EI_AOD_D1PPAP1033_PROD, ESCM_EI_AOD_D1PPAP1042_PROD”, also updated the deployment script into ACM and given access to you for the above environments.
+
+Please try to trigger the environments and let us know if you need any help.
+
+
+Hi Sughosh ,
+
+I have uploaded  to Nexus Artifact for the below thread mail SR# kindly check and confirm, so I can close SR from my end.
+
+https://escmjira.1dc.com/browse/SR-4482
+https://escmjira.1dc.com/browse/SR-4483
+https://escmjira.1dc.com/browse/SR-4485
+https://escmjira.1dc.com/browse/SR-4486
+https://escmjira.1dc.com/browse/SR-4487
+https://escmjira.1dc.com/browse/SR-4488
+
+Hi Sathish,
+
+Deployment has been completed successfully for ESCM_DEM_CAT. Please find below 
+
+https://autocm.1dc.com/acm_xgui/site/status/LogView.aspx?dbid=684244
+
+Previous deployments failed because of webdep doesn’t have permissions to stop the server.
+
+@Dinesh
+
+Thanks for the help to identify and resolve the issue.
+
+Hi Suguna,
+
+Thanks for the confirmation.
+
+As discussed in call , we will mark inactive for the below components.
+
+Component Id
+ARCO_APP
+ASET_APP
+
+f7b6c6d_qamgr
+India@95
+
+
+
+
+Hi Stephen,
+
+As discussed, I have approve the below mentioned CR’s.
+
+CRQ000000166293
+CRQ000000166889
+CRQ000000166955
+CRQ000000167428
+
+Hi Pramod,
+
+If not wrong you are trying to deploy ESCM_PREPAID_QA instead of ESCM_PREPAID_REPORT_QA.
+
+As discussed through moc will provide deploy access for ESCM_PREPAID_REPORT_QA, and let us know if you are still facing issues in deployment
+
+Hi Franklin,
+
+The Component DICE_APP migration has been already done and you can trigger the build from stash, we have also made the changes in AutoCM and made the component pointing to stash.
+If you want us to make the changes in harvest, again we have to do the porting from harvest to stash which will take lot of time and effort.
+
+Please do let us know, if you want any kind of knowledge transfer related to GIT/STASH. 
+
+Hi Balaji,
+
+CRQ000000170367 has been approved.
+
+CRQ000000173485 is in “Planning In Progress” state. Please change CR status to “Request For Authorization”. So that we can approve.
+
+Hi Abhinandh,
+
+We had a discussion with Lonnie, previously we used to capture parameters for ESCM_BAMS-CADRE_DEV through Websphere console at the time of manual deployment and update that in script but here Lonnie updated that for ESCM_BAMS-CADRE_DEV_LIB the manual deployment will happen through Liberty Admin Center https://r3dvap1062.1dc.com:9044/adminCenter/ (wasn’t able to login with 1dc and webdep credentials). But he wasn’t sure of the steps for manual deployment through this liberty console.
+
+In SR-4211 the component name is mentioned as BAMS-CADRE_BACKEND_LIBERTY which is not there in ACM. Actually the component is BAMS-CADRE_BACKEND only but now from a new branch named Development_Liberty in stash, App team is trying to build and deploy to new environment named ESCM_BAMS-CADRE_DEV_LIB with new target path /opt/bams-cadre/bams-cadre_backend/liberty. (The existing ESCM_BAMS-CADRE_DEV has to remain as it is and new one will be an addition to the existing one)
+
+Can you please check on this as to how this liberty console deployment can be accommodated.
+
+
+Hi Bharathi,
+
+We are facing issue while logging in to ACM. Runtime error is been getting encountered.
+
+Prefer the below snippet for your reference.
+
+Kindly check and do the needful ASAP as we are unable to tract the upcoming deployments.
+
+
+We could see this login failure from - 2019-06-16 12:31
+
+
+
+Hi Saptarshi,
+
+We could see this login failure from - 2019-06-16 12:31 IST, we are working on this and will let you know once the issue is resolved.
+
+
+Hi Anusua,
+
+We have an issue with ACM, we will approve the CR once issue is resolved.
+
+Hi Aninda,
+
+Yes, there is an issue with AutoCM.
+
+We have dropped a mail to ACM team person. We will keep you updated.
+
+Thanks!!
+
+
+
+Hi Lonnie,
+
+I see the build 685322  has failed with the branch - Development_Liberty. Once the build is successful, we have to proceed with the manual deployment to capture parameters and include them in the Deployment script to automate the deployment process.
+
+
+Hi Team,
+
+REQ000002766092 was cancelled .
+
+Reason mentioned as “Please raise separate requests, maximum 6 servers per request, create separate request for prod and non-prod, in your request, we could see all environment servers in one request .
+please raise separate request for each cluster pair and if it is standalone 4 servers per request.”
+
+
+Hi Kranthi
+
+MM_CONFIG component is in Gerrit not yet migrated to Stash and also few components are in gerrit.
+
+Please let us know the component name which are in gerrit. So that we can migrate  to Stash.
+
+MM_CONFIG is configured with “mm”  product id in gerrit. So we can migrate to stash and will  change the product id to “merchantmanager”.
+
+So that we can avoid the build and deployment issue.
+
+
+Regards,
+
+
+Hi Rubini,
+
+As per the subjected Incident and attachment, I could see the incident is resolved, hence I logged into the server and checked, I couldnot find the desired results(PFA the screenshot).
+
+What are we looking for : Please point the home directory to /opt/escm (currently pointing to /home/webdep).
+  Please create same directory structure  as under l3pvap1162(sample server for reference)
+We are missing acm and other directories under /opt/escm.
+
+Please let us know if anything required. Please do the needful.
+
+Hi Tania
+
+PFB required last Baseline ID, which was deployed in production with respect to specified environments. Kindly ensure and Confirm.
+
+
+Hi All,
+
+Happy to inform you all that we have completed a humungous task migrating Harvest projects to Stash end to end.                                                                .
+
+Thanks for all your support and co-operation in achieving the same.
+
+Note :- We have 41 Active projects in Harvest which has already been migrated to Stash, but we are waiting for the application team validation. Attached are the mail chain communications for the remaining active projects.
+
+
+Hi Lonnie,
+
+Please find the mail attached which was sent as a response.
+
+
+Hi Sandhya,
+
+ACM validation failed due to environment id duplicate, Please remove duplicate environment id and update in deployment properties.
+
+
+Hi Franklin,
+
+The CRQ000000176504 Implementation window is scheduled (Start: 6/25/2019 5:30:00 AM IST) and we are awaiting for the deployment process to get started.
+
+Please let us know who will be supporting the subjected  CR#  from the application team.
+
+
+Hi Team,
+
+We have acknowledge this  incident  and  deployment has completed by Krishna/Rajeev.
+
+Thanks..!!
+
+
+Hi Mrinal,
+
+I have updated script in version 48. If you need to take any backout/backup in future, please make use of version 47.
+
+
+
+Hi Henrique,
+
+The below jira tickets were raised under “SCM Tool Access” category.
+
+For creation of repository in stash, Kindly raise the Jira ticket under “Repository – New/Maintenance” category. 
+
+And mention all the repository names and details in single jira ticket. No need of raising ticket for each repository.
+
+SR-4603                
+SR-4602
+SR-4601                
+
+
+Let us know for any concerns.
+
+
+Hi Team,
+
+The subjected CRQ# is going for first time deployment.
+
+Deployment Type: AutoCM
+Target Environment(s): ESCM_DIS_WEB_PUBLISH_PROD, ESCM_DIS_SERVICE_PUBLISH_PROD
+
+Baseline Set: DIS_WEB_190626055750
+
+The second environment is going for first time deployment. ESCM_DIS_SERVICE_PUBLISH_PROD
+
+Could you please have a look once.
+
+
+Hi Team,
+
+Three applications have reported that even if they try to build from the branch, AutoCM is building the code from master:-
+
+•         NSS_VoltageETLTool – They did not have build folder in the ‘master’ due to which build was failing – DBID – 688689. So we suggested them to merge the code to master and trigger build. Now the build is successful. DBID – 688715
+•          BAMS_MS_APP_NEW – Build triggered with master (DBID - 688717), branch - feature/FORTIFYFIX (DBID - 688694) , branch - bugfix/Voltage  (DBID - 688732) where all of them has the master content.
+•         AFPGUI_BCH – Build triggered with Branch (DBID – 688729) which has the content of master (DBID – 686457).
+
+Please have a look on this issue. 
+
+
+Hi Mahua/Priyanka
+
+We have created repositories under “TASQ Technology” for the requests raised in Jira and Provided Admin access for Request Reporter(Request Initiator), PFB repo link FYR. 
+
+Kindly validate and confirm so we can close the requests from our end .
+
+SR-4660  https://escmstash.1dc.com/projects/TASQ/repos/tasq-autoinvoice_app/browse
+SR-4661  https://escmstash.1dc.com/projects/TASQ/repos/tasq-bill_event_controller/browse
+SR-4662  https://escmstash.1dc.com/projects/TASQ/repos/tasq-netman_app/browse
+SR-4663  https://escmstash.1dc.com/projects/TASQ/repos/tasq-team_billing/browse
+
+
+Hi Gregory,
+
+Deploy manifest for FD_LOBBY uploaded to AutoCM.
+
+Deployment access has been provided for your lanid for below environments.
+
+ESCM_FD_LOBBY_CAT_CHD_1017
+ESCM_FD_LOBBY_CAT_CHD_1018
+ESCM_FD_LOBBY_CAT_OMA_1040
+ESCM_FD_LOBBY_CAT_OMA_1041
+
+Test the deployment and let me know any issues.
+
+NOTE: For PROD deployment access kindly justify the reason and get approval from manager or VP
+
+
+
+Hi Tania,
+
+The component has been moved under TASQ project in stash and please find the  below Repo URL for ref.
+
+https://escmstash.1dc.com/projects/TASQ/repos/tasq-filetransfer_xfer/browse 
+
+Please let us know if any issues.
+
+
+Hi Gregory ,
+
+PFA the deployment script as per the requirement .
+
+Validate the script and let me know the modifications So that I can upload to AutoCM.
+
+Thanks and Regards
+Narendra
+
+
+Hi Priyanka,
+
+The components are been moved under TASQ project in stash and below are the Repo URL for ref.
+
+https://escmstash.1dc.com/projects/TASQ/repos/TASQ-MGI_AGENTMASTER/browse
+https://escmstash.1dc.com/projects/TASQ/repos/tasq-sdp_app/browse
+
+
+
+As per the below mail from you, we can see that project names has to be renamed which will include creating new projects in AutoCM. 
+
+Note - components name should be same in both AutoCM and Stash.
+
+Please confirm us on the same.
+
+
+ REQ000002729854  360Control server access
+ 
+ 
+ Hi Team,
+
+After migration to stash, please make sure the PROJECT_BUILD_EXECUTE_PATH and  PROJECT_BUILD_OUTPUT_PATH should be in lowercase.
+
+
+REQ000002729854  360Control server access
+
+Hi Team
+
+I have updated required ITSR details, PFB thread mail FYR.
+
+
+Hi Team,
+
+Till now these are the below cases/questions which we have come across and please follow the below response.
+
+•         Migration is required – 
+Initiate the Migration and once complete change the ACM pointing to Stash as well as remove their access to Gerrit. 
+•         Queries/KT on Stash – 
+Send an email with the attached document and include On-Boarding team in a mail chain. Check with Muthu if a KT session can be arranged. 
+•         Already in Stash / Application is Inactive – 
+Remove their access from Gerrit projects.
+•         Unable to find Application Team – 
+Create a project for the repo’s and migrate it to Stash in the name of <componentName>_gerrit.
+
+Note :- As far now we will just remove their access to applications/projects in Gerrit and not the repo.
+
+Please let me know if you guys have face any other hurdles.
+
+
+Hi Uma,
+
+I have placed Jar files in the target location. Please validate 
+
+
+
+Hi Ruman,
+
+The subjected  CR# is scheduled  on 6/29/2019 12:30:00 AM IST. Validation got failed, Can you please separate environments with “:” (update in remedy)
+
+
+
+http://w3pvwb103/acm_xgui/site/status/StatusBuild.aspx
+
+
+https://echo.1dc.com/appmap/search
+
+Nilanjan.Khatua@firstdata.com, Saikat.Chowdhury@firstdata.com, Saikat.Saha@firstdata.com, Swarnendu.Mukherjee@firstdata.com
+
+
+Hi Anirban,
+
+Use alternative URL : http://w3pvwb103/acm_xgui/site/login/Login.aspx for time being. I will let you know once the default URL is up.
+
+Hi Lauren,            
+
+I see that the request was taken care and you have admin permission on the mentioned repo.
+Going forward, please loop “X2GDS_DistAppDeploy X2GDS_DistAppDeploy@firstdata.com” for any kind of jira requests.
+Any one from my team will take care and will be done without any delay.
+
+Hi Priyanka,
+
+As per the request I have migrated  from gerrit to BitBucket and gave the repository access also, please refer the repo links below and let us know for any concerns. 
+
+TASQ-EXCEL_IMPORTER_20 --> https://escmstash.1dc.com/projects/TASQ/repos/tasq-excel_importer_2/browse 
+TASQ-XLS_LOADER--> https://escmstash.1dc.com/projects/TASQ/repos/tasq-xlsloader_app/browse 
+TASQ-OTV_FILE_HANDLING--> https://escmstash.1dc.com/projects/TASQ/repos/tasq-otv_file_handling/browse 
+TASQ-DATALOADER_FEDEX--> https://escmstash.1dc.com/projects/TASQ/repos/tasq-dataloader_fedex/browse
+
+Hi Brad,
+
+Looking on to the below request, We find that the request hasn’t been approved by your Manager yet. 
+
+https://escmjira.1dc.com/browse/SR-4574
+
+That’s why it has not been addressed. Please get manager approval so that we could provide the access to the requested repo asap.
+
+
+Hi – 
+
+One small request - Can someone please provide access to the below listed User, for the new Bitbucket project/repo’s?
+Somehow I forgot to include him in my earlier list.  
+
+F39PFCE - Ashton Herrington 
+
+Hi Alan,
+
+Please create Jira request for the category “SCM Tool Access” for the same.
+
+The current Jenkins is not cloud hosted platform , its on-premise (https://escmjenkins.1dc.com).
+
+We already have 10 agent on Jenkins and we cannot add anymore on it. Please use the exisiting one’s.
+
+X2GDS team – Please help curt to onboard their application on any of the windows slaves on Jenkins (based on their app requirement)
+
+Thanks,
+Abhilash
+
+Hi Abhinesh ,
+
+As per the SR , both AutoCM deploy access and stash repo access has been given.
+
+Please let us know if any issues.
+
+Hi Muthu/Abhi,
+
+We have closed the JIRA tickets that are assigned to earlier team members that are mentioned in excel.
+
+Thanks,
+Bharath
+
+Hi Anirban,
+
+The product id was wrongly mapped for environments. The appropriate changes are been made.
+
+Please try deployment and let us know for any concerns.
+
+Hi Mary
+
+As per below thread mail We have cleared space for below specified instance, PFB FYR
+
+HI Abhijeet,
+
+We could see the SR-4852 is waiting for approval. Please get it approved from your Line manager.
+We will be sharing the updated manifest soon.
+
+
+Hi Web-Inspect –
+I am trying to scan the application for WebInspect but getting error [AutoCM id 704667 ].
+Senthilnathan from AutoCM team, after preliminary review, has suggested to seek support from you guys.
+Could you please help on this.
+Please do let me know if am required to put up any request ticket somewhere or any other needful action from my end.
+
+Hi  Rohith,
+
+
+We could see your CRQ000000160024 went through manual deployment.
+
+We would like to onboard your application through AUTOCM, kindly share poc details to process further.
+
+If already existing means we will troubleshoot the issue to resolve it.
+
+
+
+Hi Mary
+
+As discussed through Lync conversation and below thread mail We have cleared space for below specified instance, PFB FYR
+
+Hi X3GDS Team,
+
+From the past 30 minutes all builds irrespective of the build agents are stuck at 70%
+There seems to be issue with one of the archive server r3pvap1074.
+
+
+Hi Mohammed,
+
+We are following up with X3GDS_Engineering on this issue. Attachment FYR.
+Once it is resolved we will update back in this loop.
+
+Hi Hugo,
+
+As per the request I have removed the not used environments from Deployment manifest for Component rapconn_rctcm_app, please validate the updated  script and let me know to upload in ACM.
+
+Thanks..!!
+
+Hi Abhinandh,
+
+I have checked connectivity for the severs of upcoming CR’s. PFA for the server details.
+
+
+Hi Vishal,
+
+We cannot provide access to create new repositories.
+
+For creating new repository , our team can help for which a Jira request is needed.
+
+Please let us know if any further clarifications is needed.
+
+Thanks Bharath, 
+
+Look like the deployment is getting failed with an following error. Could you please look into it. 
+
+Hi Team,
+
+We found issues while staging deployments for Rules application. As of now we have recovered space and deployments are made successful. 
+
+The Staging location - /opt/escm has only 2 GB @ r1pvap1069 and r1pvap1070, So we have raised ITSR’s for the same - REQ000003051443 and REQ000003051415.
+
+Hi Rama,
+
+The ITSR is pending with VM team. Once it is completed will update the script for the components NSS_SSCMA_SERVICES and NSS_SSCMA and confirm back to try test deployment
+
+Hi Vijay,
+
+We could see still build is not getting succeed, please look into build.xml and build.sh.
+
+Please specify correct path in build.xml and try to run manually build.xml
+
+Hi  Jeffrey,
+
+Thanks for submitting the request .
+
+We are working  on this and will let you know once it’s done.
+
+As per the request access has been provided, please validate and let us know.
+
+
+Hi Philip/Saravan,
+
+Kindly create jira ticket under Repository-New/Maintenance category to create repo in stash.
+
+https://escmjira.1dc.com
+Project : SCM Request
+Issue type: Repository-New/Maintenance
+
+
+DRD_SMART_APP_TR 
+
+Let us know for any concerns.
+
+Hi Mary,
+
+I have found that server (a3pvdb175) occupying more space that is insufficient for deployment and we have cleared some space from our end.
+
+Can you please clear some space from below directory.
+
+webdep@a3pvdb175:/home/webdep$ df -g .
+Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on
+/dev/datavg_lv04      3.50      0.65   82%    35920    15% /home
+
+root@a3pvdb175:/# du -g /home | sort -rn | more
+2.79    /home
+1.97    /home/oracle
+1.71    /home/oracle/oper
+0.60    /home/oracle/oper/bin
+0.59    /home/oracle/oper/bin/rda
+0.55    /home/oracle/oper/bin/rda/output
+0.51    /home/oracle/oper/log
+0.46    /home/oracle/oper/inc
+0.30    /home/oracle/oper/bin/rda/output/extern
+0.25    /home/oracle/oper/bin/rda/output/collect
+0.21    /home/oracle/oper/inc/feb02/archive_feb02
+0.21    /home/oracle/oper/inc/feb02
+0.20    /home/f499o7q
+0.15    /home/oracle/oradiag_oracle/diag
+0.15    /home/oracle/oradiag_oracle
+0.14    /home/oracle/oradiag_oracle/diag/clients/user_oracle
+0.14    /home/oracle/oradiag_oracle/diag/clients
+0.12    /home/webdep/acm/work
+0.12    /home/webdep/acm
+0.12    /home/webdep
+0.12    /home/oracle/oradiag_oracle/diag/clients/user_oracle/host_412599444_11
+0.12    /home/oracle/oper/inc/0723-page-issue
+0.12    /home/f2da0ij
+0.10    /home/oracle/shawn
+
+
+CRQ000000209901 
+
+ESCM_NSS_SSTR_WEBAPP_PROD,
+ESCM_NSS_SSTR_WEBAPP_DR,
+ESCM_NSS_SSEP_WEBAPP_PROD, 
+ESCM_NSS_SSEP_WEBAPP_DR, 
+ESCM_NSS_SSEP_WEBSERVICES_PROD, 
+ESCM_NSS_SSEP_WEBSERVICES_DR, 
+ESCM_NSS_PROD, 
+ESCM_NSS_DR
+
+r3pvap1079
+r3pvap1080
+r1pvap1138
+r1pvap1139
+r3pvap1081
+r3pvap1082
+r1pvap1140
+r1pvap1141
+
+
+
+Hi Purvi,
+
+ACM unable to restart the instance. Please reach out middleware to start the instance.
+
+Attempt 16 out of 16...
+INFO: Process::FindJVMProcesses - Detecting the "jps" command to use...
+INFO: Process::FindJVMProcesses - Detected "websrvr" user to run jps command.
+INFO: Process::FindJVMProcesses - Executing the following "jps" command: su websrvr -c "/appserver/java/jdk1.8.0_111/bin/jps -m" | grep "vru2cma"
+The Java Virtual Machine that started with instance "vru2cma" was NOT found.
+"vru2cma" has not been started.
+
+INFO: Jboss::IsStarted - The instance "vru2cma" has not been started.
+ERROR: State::Execute - detected error during action - Jboss:IsStarted:vru2cma
+
+
+
+-----------------------------
+
+205     pwd
+206     ls
+207     du -sh * | sort -nr | head -20
+208     hostname
+209     df -h .
+210     cd webdep
+211     ls
+212     pwd
+213     cd acm
+214     cd work
+215     ls
+216     cd transfer
+217     du -sh *
+218     cd ../stage
+219     du -sh *
+220     history
+$
+
+-----------------------------
+
+207     du -sh * | sort -nr | head -20
+208     hostname
+209     df -h .
+210     cd webdep
+211     ls
+212     pwd
+213     cd acm
+214     cd work
+215     ls
+216     cd transfer
+217     du -sh *
+218     cd ../stage
+219     du -sh *
+220     history
+221     clear
+222     history
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   

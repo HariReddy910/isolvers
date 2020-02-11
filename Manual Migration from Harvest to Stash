@@ -1,0 +1,46 @@
+Manual Migration from Harvest to Stash
+Step 1 :- Expand the Harvest component and traverse till the actual folder.
+Example: - test_project -> DEV -> test_project_Deployment.
+Right click on the component and click on “Add WorkArea”
+ 
+Step 2 :- Choose the options as it is in the screenshot and provide a Client Path for creating local workarea.
+ 
+Please choose the same option as it is the window that appears and click Finish.
+ 
+Below is the window that appears during the WorkArea creation.
+ 
+Step 3 :- Once the WorkArea is created traverse to the location in your local system.
+ 
+Step 4 :- Copy the workarea and paste it in different location. (when you do “git init”, the command creates .git file due to which the workarea in stash gets updated which will request for checkin in harvest, this is the reason we copy workarea to different location)
+ 
+Step 5 :- Once the repo is moved to different location, open Git Bash and traverse to the new location. And proceed with 
+•	git init
+•	git add .
+ 
+If there are no errors faced during “git add .” proceed with Step 8.
+
+
+Step 6 :- If any .tmp file causes error as in above screenshot, edit the “exclude” file from <LocalRepoPath>/.git/info using Notepad/Notepad++
+ 
+
+Step 7 :- Edit the file and add “*.tmp” at the end of the file.
+ 
+Step 8 :- Once “git add .” is done, please proceed with 
+•	git commit –m <commitMsg>
+ 
+
+
+
+
+
+
+Step 9 :- Create a new Repository in Stash under project “HAR”.
+ 
+
+ 
+Step 10 :- Once Repo creates in Stash proceed with “git remote add origin <StashURL>” and “git push –u origin master”
+ 
+
+
+Step 11 :- Once code base is pushed to Stash, please delete the workarea created in the 
+ 

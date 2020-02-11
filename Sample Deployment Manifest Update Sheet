@@ -1,0 +1,29 @@
+Component	Copy From Environment/Component	Add to Environment 	Add Target Servers	Deploy Directory
+<Component / Product Name>	<Environment/Component>	"<New Environment Name>
+(PROD/DR/INTG/CAT)"	R1PVAP1304 (Sample ID)	/prod/svoltp/release/OL_MT_SCRIPTS (Sample Path)
+			R1PVAP1304 (Sample ID)	                         "
+			R1PVAP1304 (Sample ID)	                         "
+			R1PVAP1304 (Sample ID)	                         "
+			R1PVAP1304 (Sample ID)	                         "
+			R1PVAP1304 (Sample ID)	                         "
+<Component / Product Name>	<Environment/Component>	"<New Environment Name>
+(PROD/DR/INTG/CAT)"	R3PVAP1217(Sample ID)	/prod/svoltp/release/OL_MT_SCRIPTS (Sample Path)
+			R3PVAP1217(Sample ID)	                         "
+			R3PVAP1217(Sample ID)	
+			R3PVAP1217(Sample ID)	                         "
+			R3PVAP1217(Sample ID)	                         "
+			R3PVAP1217(Sample ID)	                         "
+<Component / Product Name>	<Environment/Component>	"<New Environment Name>
+(PROD/DR/INTG/CAT)"	R1PVAP1304(Sample ID)	/prod/svoltp/release/OL_MT_SCRIPTS (Sample Path)
+			R1PVAP1304(Sample ID)	                         "
+			R1PVAP1304(Sample ID)	                         "
+			R1PVAP1304(Sample ID)	                         "
+			R1PVAP1304(Sample ID)	                         "
+			R1PVAP1304(Sample ID)	                         "
+<Component / Product Name>	<Environment/Component>	"<New Environment Name>
+(PROD/DR/INTG/CAT)"	R3PVAP1217(Sample ID)	                         "
+			R3PVAP1217(Sample ID)	/prod/svoltp/release/OL_MT_SCRIPTS (Sample Path)
+			R3PVAP1217(Sample ID)	                         "
+			R3PVAP1217(Sample ID)	
+			R3PVAP1217(Sample ID)	                         "
+			R3PVAP1217(Sample ID)	                         "

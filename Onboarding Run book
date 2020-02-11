@@ -1,0 +1,450 @@
+SCM Onboarding Run Book
+Table of Contents
+
+ACM product creation	3
+ACM project (component) creation	4
+Environment creation	7
+Server creation in ACM	8
+Build Script Understanding	11
+Deployment script preparation	18
+Webdep ITSR Creation	20
+SSH Connectivity setup- First time	24
+Using HP Opsware	24
+Manual steps	28
+FDC Frequent Build Issues	30
+Common Deployment issues	32
+Firewall Request (Tufin Request – to enable port)	32
+
+
+
+
+
+
+
+
+
+Document Revisions
+Date	Version	Description	Author	Reviewer	Approver
+16.03.2018	0.1	Initial Version	Ajit Krishnan	Ananda Krishnan	Ananda Krishnan
+					
+
+
+Organization
+
+#	Name	Designation	Contact Number	E-mail
+1	David Dickey	Director GIO	+1-678-255-3456	David.Dickey@firstdata.com
+2	Joseph Rangitsch	Director IT	+1-770-843-6075	Joseph.Rangitsch@firstdata.com
+3	Ananda Krishnan Gopala Krishnan	Offshore Manager	+1-302-793-6054	AnandaKrishnan.GopalaKrishnan@firstdata.com
+4	Muthuraman	Team Lead – Virtusa	+1-713-505-0029	Muthuraman.Muthuraman@firstdata.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+ACM product creation
+Product in ACM is nothing but project in Stash. 
+Creating product in ACM: Please go through the following path in ACM
+Products  Product  Click on “New” 
+
+       
+After that fill the following details (Mandatory Details “*”)
+•	Product ID (Unique)
+•	State (Active or Inactive)
+•	Install Type (Sequence or Iterative).
+ Click on Update button  
+
+  
+You can get the optional info from the Jira Request like UAID, Product Headline
+
+ Example: EAD (Enterprisearchitecture-data)
+           
+ACM project (component) creation 
+Project (component) in ACM is nothing but repository in Stash
+
+Creating project in ACM: Please go through the following path in ACM
+Project Setup  New Project and fill the following details.
+
+	Agent ID to carry out request (Build Server): Choose anyone from the dropdown to carry out the project creation – usually w3pvap1019
+	Select the product ID this new project belongs to: Specify the Product id under which component/project need to be created  
+	New Project ID (same as component ID): Provide the name in which project has to be created. Once this field is filled up two other fields (Build execute path: & Build output path :) gets auto filled up.
+	New Project Headline: Name of project
+	Version control repository ID: select type of version control repository where code resides.
+	Project Owner Lan ID (Git Projects): LAN id of the one who creates the project
+	Baseline/Tag name format:  %PN%_%YY%%MM%%DD%%TM%
+Ex: ENTERPRISE-INSIGHTS_190606135517-This field is automatically filled up when you click on Project setup New Project
+	Build command: /bin/ksh build.sh for non-windows (e.g. Linux, Solaris) and buil.bat for windows
+	Build execute path: <name_of_project>/build – This field gets auto filled up when we initially provide value to New Project ID field.
+	Build output path: <name_of_project>/package – This field gets auto filled up when we initially provide value to New Project ID field.
+	Build agent system: based on the build tool needed - usually s1qvap952 for ANT, Maven and w1pvap1019/w1pvap1020/w3pvap1019 for MS Build
+	Archive repository:  git-escmstash
+	Archive project ID: <PRODUCT-ID>_ARCHIVE
+	Archive path: / <PRODUCT-ID>_archive/
+	Is this a Maven project: Yes or No.
+               
+Once you click on “Create Project” you will be redirected to Status  Project Setup 
+  
+Where you can view the logs and once it is 100% project will be created and you can view the project under Products  projects
+Once project is created that in turn will create the component with same name in ACM which can be viewed under Products  component
+For build and deployment setup the component will be used.
+ 
+
+ 
+Environment creation
+Dev, CAT, QA/INTG, DR and Production
+Code need to be tested at various Environments before it goes for live or production. 
+Creation of Environments in ACM:  Please go through the following path in ACM Environments  Environment and fill the following Mandatory details.
+
+	Environment ID*: Name of environment 
+	State*: Active or Inactive
+	Is Change Order*:  For Lower Environments you can keep this option as false and true for higher Environments
+	Product ID*: Name of Product Id
+	Deploy systems in parallel (ssh): True or False based on project requirement
+	Phase*: Dev, CAT, QA/INTG, DR and Production
+	Transfer*: ssh
+	Installer ID*: webdep
+And click on “Update” button to create the Environment 
+ 
+For Example: ESCM_CL-VLINK_BOT_APP_DEV
+
+ 
+	
+Server creation in ACM
+Purpose: The purpose of the document is how to create server (referred as system in ACM), when there is a requirement to deploy in to NEW server.
+Points to be remembered while creating servers.
+	Server staring with L, R, D  Linux servers
+	Server staring with S  Solaris servers
+	Server staring with W  Windows
+	Server staring with AAix servers
+	Physical location of servers
+	Omaha 1Indication value
+	Chandler3Indication value
+	EMEA5Indication value
+Initial check before creating server:
+Step 1: Place the server name which you have handy in the below system id to check if system already exists
+ 
+Step 2: If the server already exists, it will throw the results as below.
+ 
+How to create if it’s a new server:
+Please follow the below steps to create server (system) in ACM
+Step 1: Once you are logged in to ACM, Navigate to left pane ENVIRONMENTS tabSystem, as shown below
+ 
+Step 2: Click on New, which is highlighted in Blue on the top.
+
+ 
+Step 3: Once you have clicked on NEW, please fill the empty spaces as below
+ 
+
+Find the below list of fields in the screenshot:
+	System id  provide the server id
+	Stateactive 
+	Os type(opearting system type) Linux,windows accordingly as per server details given in starting page of document
+	Physical Location : Omaha,Chandler,EMEA
+	Stage user id,stage user password,stage path  Mention “XX” in all 3 coloumns.
+After filling the above all fields click on update as shown below:
+ 
+Note:You can Re-check the created server,by placing it in the system id place as shown in the starting of document.
+Build Script Understanding
+Whenever a build needs to be triggered (RequestBuild) in ACM it will be done in the below section.
+ 
+The first field to be filled up is Project ID which is nothing but the Project/Component name in ACM or the repository name in Bitbucket Stash.
+Once the Project ID field is filled up SCM State to build from field from the above image is replaced with two new fields (Build based on Branch/Tag? & Git Build From:) as we have migrated from Harvest Version Control tool to Bitbucket Stash.
+	Specify whether to build based on branch/tag (usually branch) and provide the bitbucket repository branch name from where code has to be picked up by AMC and built.
+Also the configuration of the project pops up at the right side of the screen.
+	Based on the configurations of the project done while creating it in ACM the fields Agent ID: & Build Script: gets auto filled up. 
+	Usually for Dotnet applications that use MS Build the agent id will be w1pvap1019/w3pvap1019/w1pvap1020 and the build script will be build.bat
+	Usually for Java applications that use ANT/Maven/Gradle the agent id will be s1qvap952/s3dvap965 and the build script will be build.sh
+	For other type of applications appropriate agents and build scripts will be used.
+ 
+Other fields are optional and based on the requirement they can be specified.
+Keep the Remove workspace? Option as No in order to view the build work space via ACM UI.
+Once Submit Build is clicked the build execution begins based on the build script (build.sh or build.bat)
+Whenever Submit Build is given in the build server in the workspace location /opt/escm/acm/work/ws an unique folder gets created called as DB ID in ACM.
+Below image shows list of DB IDs created for each build.
+ 
+ 
+Next the entire repository will be cloned inside these DB ids. Below image shows the build workspace via ACM UI where the entire repository is cloned inside a DB ID.
+ 
+ 
+ 
+The same contents are available inside the Bitbucket repository and the same has got cloned inside the DB ID as well.
+ 
+Whenever the entire repository is cloned inside the DB ID in addition to the contents available in the repository the following three folders get created.
+•	.git folder  indicates it is git repository
+•	Package folder  where the build output (war/jar/ear) will be copied after build is completed as per the build script
+•	Baseline folder  where the build output will be available in tar.gz format
+ 
+Let us consider the build script (build.sh) available @ https://escmstash.1dc.com/projects/NSS/repos/sped/browse/build/build.sh
+ 
+The below three lines are used to set the environment variables. These lines tell ACM In build server s1qvap952 in which path Java and Ant are available and can be referred.
+export JAVA_HOME=$TOOL_HOME/java/jdk_1.6.0_31
+export ANT_HOME=$TOOL_HOME/ant/ant_1.8.2
+export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
+ 
+$TOOL_HOME=/opt/escm/acm/tool
+Whenever the build execution starts based on the build script ACM will be pointing to the location inside the repository where the build script is available. 
+From there have to navigate to the path where ANT’s buil.xml or Maven’s pom.xml or Gradle’s build.gradle file is available. In this case it is build.xml.
+cd ../sped
+ 
+Next execute the appropriate build command
+ant
+Once the build command is executed based on the build.xml instructions the code will be built and the output war/jar/ear will be thrown to the location as specified in build.xml
+In this case the output will be thrown into dist folder.
+ 
+The final step of all build script will be to copy the build output into the package folder which is the last line of the build script.
+cp dist/*.jar ../package
+ 
+Similarly in build.bat as well the flow of execution will be same and the difference will be MS build instead of ANT/Maven/Gradle and accordingly the contents of the script will vary.
+Deployment script preparation
+•	Once Package (.war, .ear, .jar) is ready we need to deploy the package in to target server (server on which your application is running).
+•	For this in ACM we are using a Deployment Script which is written in .xml format.
+•	This Deployment script is divided into 4 major steps they are 
+1.	Pre-Install: In this step we will write script to stop the server and take back-up of existing package.
+Note: Based on the application teams requirement only we need   to stop the server.
+2.	Install: In this step we need to transfer or replace the existing package with new package and change the permission for the package.
+3.	Post-Install: Here we need to start the server if we stopped the server in Pre-Install step.
+4.	Back-out:  This back-out option enables us to go back or rollback to the previous versions package which we have backed up in Pre-install step.
+For Preparing the Deployment Script we need to gather some Information from the respective application team. 
+•	Environment details.(DEV,QA,CAT,DR,PROD)
+•	Target Server details. 
+•	 Deployment path (path to copy the package).
+Sample deployment script:
+ 
+Key concepts
+While preparing deployment script we should know the following things
+                  <file_path>.<file_path>
+•	"." (default)   --> Entire package folder to specific path.
+•	"Tree" --> specific folder to specified path.
+•	Example: /specified/deployment/path,tree,<folder name>. 
+•	"common" --> .war,.ear,.jar to specific folder 
+Example: /specified/deployment/path,common,<folder name>.
+Modules: They are the building blocks for a deployment script. They are used to perform certain tasks. 
+There are various modules that AutoCM supports which are written by AutoCM developers. 
+You can find those modules in the following path in AutoCM 
+Deploy ConfigModules 
+ 
+ Examples: In the above deployment script we have used different module at different stages 
+•	“Backout” module with action “Backup” which will copy the current version of package before it got replaced by new version.
+<execute module="Backout" action="Backup" argument="/folder/to/backup" />
+Same “Backout” module with action “Restore” will copy old version of package by replacing the new version
+<execute module="Backout" action="Restore" argument="/folder/to/restore" />
+•	“Transfer” module with action “Transfer” will move the files from one location to another.
+•	“File” module will be used to perform different operations on the file.
+•	To accommodate a specific task which is not listed in AutoCM modules we can use “Command” module action “Command” 
+
+Example:
+<execute module="Command" action="Command" argument="su - svc_ca7cypress -c &quot;sh /hadoop/app/AcquiringLobbyRealtime/EnterpriseInsightsService/bin/EnterpriseInsightsService stop&quot;,ignore" />
+Webdep ITSR Creation
+Purpose: How to create an ITSR for new server.
+The main purpose of creating an ITSR is:
+	The server should be configured with webdep
+	File system should be /opt/escm
+	Webdep should be added in users.ignore file under centrifydc
+	Webdep should be non-interactive remotelogon,it should be added to local admin group.
+Sample ITSR to refer:
+REQ000002708501 -ITSR for space increase
+Windows ITSR- REQ000002628732, REQ000002628732
+Note: Model ITSR’s can be changed in future, take latest as & when required.
+Steps to raise ITSR:
+Step 1: Login to BMC Remedy, you can see welcome page as below:
+ 
+	Request Entry: This tab is to create new ITSR
+	Search requests: This tab is to search for an existing ITSR
+Step2: Click on Request Entry in the above step1,you can see the popup window as below:
+ 
+Search for server access-North America in the top left corner. You can see the raised requests earlier which were initiated stage in the right side
+Step 3: Once you searched you can see the tab below:
+ 
+Fill the fields mentioned above by referring any sample ITSR. Few details are provided below for reference.
+	End user name: your name
+	End user LAN ID : your LAN ID
+	End user employee id or contractor id : LAN ID/contractor id
+	End user status: drop down  end user
+	Manager name: David dickey A
+	Model an existing user : provide sample user name to model
+	Active directory : webdep
+	Server type: give Linux/Unix/aix
+Line of business:
+You need to refer APPMAP URL for this.
+Steps to login to APPMAP and get line of business
+Step 1: Once you login into APPMAP, you can view the welcome page as below.
+ 
+
+Step 2: You can do search category by selecting any of the UAID /Application name.
+ 
+Step3 : click on UAID ,u will get screen as below and get business segment GBS in this case
+ 
+Then go to ITSR and update remaining 3 fields
+	Number of server requests: 3/4/5
+	Server list separated by commas: names of servers separated by comma
+	Multiple server attachment provided: Yes in drop down.
+Update all those above fields and click on submit and submit ITSR and SAVE ITSR REQ*** for future reference.
+SSH Connectivity setup- First time
+Using HP Opsware
+Try this only for non-customer facing environments (Linux and AIX based)
+•	Login to HP Opsware.
+•	Enter the target server name in the server and click submit
+ 
+•	 Right click on the server and select Attach -> Software policy
+•	Select Browse files -> FDC -> Team Utilities -> TMDSM (select TMDSM)
+ 
+
+ 
+
+•	Select linux_ssh_setup Agent and click Attach.
+
+ 
+
+ 
+•	Select all the checkboxes to get an email notification.
+
+ 
+•	Finally click close.
+ 
+•	Login to agent id (r1pvap1123/r1pvap1124/ r3pvap1070) for testing
+•	Try to transfer a sample text file from agent to target server
+•	Switch user to –webdep (su – webdep)
+•	From default directory (/opt/escm) execute the below command
+Scp –p testfile webdep@targetserver:/tmp
+ 
+•	Check if you get the below message
+Access to this server is only granted to First Data authorized personnel.
+testfile                                      100%    7     0.0KB/s   00:00
+r1pvap1123:
+ 
+r1pvap1124:
+ 
+r3pvap1070:
+ 
+Manual steps
+Try this only for non-customer facing environments (Linux and AIX based)
+•	Login to the target server using Hp Opsware
+ 
+•	With the root user cd to /tmp directory (cd /tmp)
+ 
+•	Create a sshSetup.ksh file (vi sshSetup.ksh)
+ 
+•	Go to insert mode (press i)
+•	Paste the code available in confluence (https://escmconfluence.1dc.com/download/attachments/87656280/sshSetup.ksh.txt?api=v2)
+ 
+•	Save the file (:wq!)
+ 
+•	Change the file permission (chmod 755 sshSetup.ksh)
+ 
+
+ 
+•	Run the file with root user within the tmp directory (./sshSetup.ksh)
+•	Check the logs if it executes without any error
+("Successfully configured SSH on target: $host")
+ 
+•	Login to agent id (r1pvap1123/r1pvap1124/ r3pvap1070)
+•	Try to transfer a sample text file from agent to target server for testing
+•	Switch user to –webdep (su – webdep)
+•	From default directory (/opt/escm) execute the below command
+Scp –p testfile webdep@targetserver:/tmp
+ 
+•	Check if you get the below message
+Access to this server is only granted to First Data authorized personnel.
+testfile                                      100%    7     0.0KB/s   00:00
+r1pvap1123:
+ 
+r1pvap1124:
+ 
+r3pvap1070:
+ 
+Note: for AIX we need to modify the script (sshSetup.ksh) as below
+From
+hostType=${host:0:1}
+#hostType="a"
+To 
+#hostType=${host:0:1}
+hostType="a"
+FDC Frequent Build Issues
+Purpose: 
+	Purpose of this document is to identify the build related frequent issues and their fixes. There may be a number of issues we can face. Followings are some of the build related issues and their fixes. For Autocm build, we are using two types of build files, one is build.bat and another one is build.sh. The build.bat is only for windows and the build.sh is for Linux, Solaris, and Red Hat operating systems.
+Types of issues we will face:
+	Followings are the issue types and their fixes. Issues that we are facing frequently are listed below.
+1.	ERROR: VcsGit::WorkspacePopulate - failed to clone project.
+2.	Directory does not contain any items.
+3.	Fatal error compiling: invalid target release.
+4.	Package Directory is Empty.
+5.	File: not found.
+6.	JAVA_HOME/ MAVEN_HOME/ANT_HOME not defined correctly.
+7.	Path Related Issues.
+8.	Permission Denied To cp(copy)/del(delete)/mkdir(Make directory).
+Fix for the Above Errors:
+1.	ERROR: VcsGit::WorkspacePopulate - failed to clone project:
+Issue: If you face the above issue, then it will be connection oriented issue between the build server and the repository or the repository server may be down.
+Fix: Contact DevOps Tools Team to this fix.
+2.	Directory does not contain any items.
+Issue: While we are trying to copy or move or any other operations into some folders, which doesn’t have any files or anything on that time this issue will arise.
+Fix: Please make sure the files are available inside the folder or change the build.sh file to point the correct folder.
+3.	Fatal error compiling: invalid target release.
+Issue: This type of issue will arise only for maven related projects.
+Fix: Please make sure that the plugins or the dependency jar file is available in the specific repository. It is may be a nexus or maven or the local repository.
+4.	Package Directory is Empty.
+Issue: Once the build has completed, we didn’t copy all the files which we need for the future deployment into the package.
+Fix: Please add copy command in the build.sh/build.bat to copy the needed files into package folder.
+5.	File: not found.
+Issue: This issue will arise when we try to copy or move or rename or delete the file which is actually not in the mentioned location.
+Fix: Please make sure that the file is available in the mentioned location or please mention the correct location in the build.sh/build.bat file.
+6.	JAVA_HOME/ MAVEN_HOME/ANT_HOME not defined correctly.
+Issue: This issue will arise when you export the wrong JAVA_HOME or ANT_HOME or MAVEN_HOME in the build.sh/build.bat.
+Fix: Please mention the correct HOME path in the build.sh/build.bat.
+7.	Path Related Issues.
+Issue: This issue will arise only path related command in build.sh/build.bat.
+Fix: To fix this issue, please login into the build server and try to run the build.sh/build.bat with correct paths. Once the build has completed successfully, then please upload the build.sh/build.bat in to the repository and try a new build from ACM.
+8.	Permission Denied To cp(copy)/del(delete)/mkdir(Make directory).
+Issue: This issue will arise when the specific user doesn’t have the permission to copy or delete or make any directory on the folder.
+Fix: Please change the ownership for the particular folder form the build.sh/build.bat file. Command to change the ownership “chown –R webdep:web Folder_name/”.
+Common Deployment issues
+	Once trigger the deployment, please check the logs in acm if it’s not rolling check whether deployment agent acmservice is up or not, then restart services.
+	Check whether deployment if failing due to space issue, if it is due to space then login to server, go to /opt/escm/work/stage/dbid, /opt/escm/work/backout/dbid. Delete the previous dbids.
+	Check whether ssh setup is there for target server from deployment agent and try to transfer file from deploy agent to target servers.
+	Check home directory for webdep, it should be /opt/escm if not raise ticket to server team to change the home directory.
+	Check whether environments have been configured with right product name, it should be mapped as per component and product name. Stash project and repo name should match with acm product name and project name.
+Firewall Request (Tufin Request – to enable port)
+Go to the below URL using 1dc lan id and password
+https://tufin.1dc.com/	
+New Request > Global Standard Firewall Request
+
+
+
+
+
+
+Screenshot 1: Please file subject for the required port number
+ 
+Screenshot 2: Enter source (example :deploy agent) & Target (Target servers) ip address.
+Please fill the port number details in the Application Identity column and provide comment as required.
+ 
+
+
+
+
+
+
+Screenshot 3:  Please fill the fields as per screenshot attached below
+ 
+Screenshot 4: Please fill the fields as per the below screenshot
+ 
+
+
+
+
+
+
+
+Screenshot 5:  Please fill the fields as per below screenshot
+ 
+Screenshot 6:  Please fill the fields as per below screenshot
+ 
+Screenshot 7:  Please fill the fields as per below screenshot
+ 

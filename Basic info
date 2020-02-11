@@ -1,0 +1,156 @@
+
+Deployment Error's
+---------------------------------
+
+PRODUCT: firstapi
+ENVIRONMENT: ESCM_FIRSTAPI_CERT_B
+BASELINE SET: FIRSTAPI_SPRING_180919170606
+
+Description:-
+
+File "", line 995, in startAppInstance
+com.ibm.ws.scripting.ScriptingException: com.ibm.ws.scripting.ScriptingException: com.ibm.websphere.management.exception.ConnectorException: ADMC0009E: 
+The system failed to make the SOAP RPC call: invoke
+
+ERROR: Execute::Execute - failed to execute command
+
+Resolution:-
+
+After Cluster recycle , tried re-deploy and it was success
+
+---------------------------------------------------------------
+
+ERROR: Files::RemoveRecurse - Path: doesn't exist: No such file or directory
+
+WARNING: Monitor::Cleanup - unable to remove directory: 
+
+Description:-
+
+After redeployment on different agent, xcmd.exe and xcmdsvc.exe were not found in C:\Windows\syswow64 folder on w3pvap1221.
+
+Resolution:-
+
+Myron copied the two files to the folder on w3pvap1221. Redeployment was successful (there was no need to change agents).
+
+-----------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------
+
+f7tkp6v
+Akira@143
+
+------------------------------------------------------
+
+Websphere userid,pw:
+
+webdepmiddleware 
+6J5pAVpc9
+
+096038005021019056061091117
+
+webdep
+Welcome1
+welcome1
+Welcome01
+welcome01
+
+---------------------------------------------------------
+
+***** Jenkins Link *****
+
+--------------------------------------------------
+
+ INC000001676303 
+------------------------------------------------------
+
+w3pvap1320
+
+w3pvwb1011
+
+---> windows+R
+--->  mstsc
+----> Wndows+R
+--> services.msc
+
+---------------------------------
+
+cd /tmp
+
+vi sshSetup.ksh
+
+https://escmconfluence.1dc.com/download/attachments/87656280/sshSetup.ksh.txt?api=v2
+
+chmod 755 sshSetup.ksh
+
+./sshSetup.ksh
+
+
+
+
+------------------------------------------------------------
+passwd -S webdep
+passwd webdep  (change password to Admin@123)
+
+s1bvdb986 s3cvdb999 s3pvdb024
+
+
+------------------------------------------------------
+
+
+https://escmstash.1dc.com/projects/FDS/repos/sro-ui/browse/Jenkinsfile?at=refs/heads/development
+
+-------------------------------
+
+sample itsr 
+
+REQ000003063088
+
+--------------------------------
+
+
+
+Hi Abhi,
+
+I will give some basic on Jenkins
+
+•         Jenkins Introduction
+•         User access
+•         New job configuration
+•         Bitbucket configuration
+•         Build setup
+•         Crontab
+•         Maven target execution
+
+Neppoliean,
+
+Please provide basic training on Pipeline jobs to the team.
+
+-----------------------------------------------------------------------------
+
+Kill a dbid in target server:
+
+Login to target server-webdep
+
+Ps – ef |grep dbid
+
+U will get process it,sudo perl 2nd one
+
+Check process id by using command,kill – 9 process id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

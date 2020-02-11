@@ -1,0 +1,60 @@
+
+
+Pre-Validation steps: 
+•	Before  we start the Pega code move manual deployment, We have to  check the iplan for  R-CONTEXT . 
+•	Requester has mentioned  the path for R-CONTEXT already  in iplan.  
+•	We need to download the R-Context to our local  before the window time starts.
+Implementation Steps:
+Step-1:Click  STARTAll ProgramPegaREACH Pega Reach Assistant.exe.
+   
+
+Step-2:  Click SAVE, Select the Client type as  mentioned in iplan, Collections/Customer Service.
+ 
+
+
+
+Step-3: First we need to  Select the PegaReach version, then search the application name as mentioned in Iplan.eg: hsbup.  Click the connect button.
+ 
+
+ 
+
+
+Step-4: Login with our team TMDSM  Credentials , refer the below path
+G:\OMA\TMDSMBAU\Evolve Password.
+ 
+
+
+
+
+
+
+Step-5: once you logged in  application window will open, Then we need to click the R-context option on left corner as highlighted. 
+ 
+Step-6:  we need to lock the application to do the code move on production servers.
+ 
+
+
+
+
+
+
+Step-7:  Once we locked the application, Press->F12 Button to open the PegaReach Workbench.  
+ 
+Step-8: Enter the CR number and click OK button.
+ 
+
+Step-9: File PegaMove to Application name (hsbup).
+ Step-10:  Open the R-CONTEXT folder,  Which we already downloaded in our local. Please refer the pre-validation steps. Select  the files  listed in R-CONTEXT folder  and uncheck the Enable Undo option. Click the Save Records Button.
+ 
+Step-11: Click Save Log File button.
+ 
+Step-12:  After the code move we have to open the log checker  tool  for checking the validation purpose.
+ 
+Step-13:  Once done the validation steps copy the lines and share the details  to requester in  MOC.
+ 
+Step- 14: Finally we have to  select the Resolved option to finish the  deployment . Select Approve button on the left corner. 
+Step-15:  Moved the log files to mentioned remote location.
+ 
+ 
+DONE…!
+

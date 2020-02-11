@@ -1,0 +1,36 @@
+CRQ  Implementation :
+1.	First CR validation has to be done.
+2.	Make sure you have enough space and ssh connectivity to start the deployment process.
+3.	Click on the Environment link with the respective CR, as shown below.
+ 
+4.	Above link redirects to deployment page.
+
+ 
+
+5.	Confirm with the requestor whether the servers are unmanaged or not .
+6.	Please do confirm environment, baseline and mode of deployment (stage/automatic) with the requestor.
+7.	If you have multiple baselines and Environments, ask  the requestor which environment and baseline should go first.
+8.	Select the Environment from the drop down list, Paste the Baseline in baseline section.
+
+ 
+
+9.	Select deploy mode as ‘Stage’ as shown below:
+ 
+
+10.	Click on the submit deploy. It redirects you to deployment status page.
+11.	After Staging is done. click on Auto–install button.
+ 
+
+12.	If it is a Stage deployment, Do follow the same steps until step 11 and then click on  Pre-install , Install, Post-Install as per the requestor instructions.
+13.	Click on the log button , share the URL with the requestor.
+
+ 
+
+ 
+
+14.	Note : If requestor ask you to go with a particular agent, then click on the check box to select the agent manually and click the submit deploy button.
+ 
+
+
+
+

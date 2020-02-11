@@ -1,0 +1,81 @@
+SSH Connectivity setup- First time
+
+Using HP Opsware
+Try this only for non-customer facing environments (Linux and AIX based)
+
+•	Login to HP Opsware.
+•	Enter the target server name in the server and click submit
+ 
+•	 Right click on the server and select Attach -> Software policy
+•	Select Browse files -> FDC -> Team Utilities -> TMDSM (select TMDSM)
+ 
+
+ 
+•	Select linux_ssh_setup Agent and click Attach.
+ 
+
+ 
+•	Select all the checkboxes to get an email notification.
+
+ 
+•	Finally click close.
+ 
+•	Login to agent id (r1pvap1123/r1pvap1124/ r3pvap1070) for testing
+•	Try to transfer a sample text file from agent to target server
+•	Switch user to –webdep (su – webdep)
+•	From default directory (/opt/escm) execute the below command
+Scp –p testfile webdep@targetserver:/tmp
+ 
+•	Check if you get the below message
+Access to this server is only granted to First Data authorized personnel.
+testfile                                      100%    7     0.0KB/s   00:00
+r1pvap1123:
+ 
+r1pvap1124:
+ 
+r3pvap1070:
+ 
+Manual steps:
+Try this only for non-customer facing environments (Linux and AIX based)
+•	Login to the target server using Hp Opsware
+ 
+•	With the root user cd to /tmp directory (cd /tmp)
+ 
+•	Create a sshSetup.ksh file (vi sshSetup.ksh)
+ 
+•	Go to insert mode (press i)
+•	Paste the code available in confluence (https://escmconfluence.1dc.com/download/attachments/87656280/sshSetup.ksh.txt?api=v2)
+ 
+•	Save the file (:wq!)
+ 
+•	Change the file permission (chmod 755 sshSetup.ksh)
+ 
+
+ 
+•	Run the file with root user within the tmp directory (./sshSetup.ksh)
+•	Check the logs if it executes without any error
+("Successfully configured SSH on target: $host")
+ 
+•	Login to agent id (r1pvap1123/r1pvap1124/ r3pvap1070)
+•	Try to transfer a sample text file from agent to target server for testing
+•	Switch user to –webdep (su – webdep)
+•	From default directory (/opt/escm) execute the below command
+Scp –p testfile webdep@targetserver:/tmp
+ 
+•	Check if you get the below message
+Access to this server is only granted to First Data authorized personnel.
+testfile                                      100%    7     0.0KB/s   00:00
+r1pvap1123:
+ 
+r1pvap1124:
+ 
+r3pvap1070:
+ 
+Note: for AIX we need to modify the script (sshSetup.ksh) as below
+From
+hostType=${host:0:1}
+#hostType="a"
+To 
+#hostType=${host:0:1}
+hostType="a"
+

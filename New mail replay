@@ -1,0 +1,1093 @@
+Hi All,
+
+Nandhini, has helped us on this incident yesterday. You may close the same.
+
+
+Hi,
+
+To proceed with next steps we need certain ports to be opened for which I have raised Tufin request  #88976 which may take some time.
+
+Bharath – can you please work to get the ssh setup done from our deploy servers to the new agent l3dvap1043.
+                    The deploy servers are r1pvap1124,r3pvap1071.
+
+
+					
+Hi Logumani,
+
+The mentioned Jira ticket (SR-6054 ) is still in “Waiting for Approval” state.
+
+John,
+
+Kindly approve the Jira from Jira portal.
+
+https://escmjira.1dc.com/browse/SR-6054
+
+Let us know once the ticket is been approved so that we can work on it.
+
+
+Hi Rahul,
+
+As discussed over MOC, We are holding off providing Prod/DR access as of now. Once we get an update, we will be providing access.
+
+I’m unable to logon to the system to verify. 
+
+ACM has not been configured on it yet so if it rebooted it is verified.
+
+
+Hello Manisha – 
+
+  pls provide admin access for the GIT repo. Let me know if you need any additional approval. We are rapidly growing team and in the process of building several microservices. We want to club all the services under one parent repo. 
+
+Let me know if you need further discussion. Happy to help you understand the need. 
+
+Pls take example of below repos.. I have several of this kind. 
+
+Hi Shruti,
+
+Build setup has been completed. Please try build and let us know in case of any issues.
+
+Build access has been granted for you. For others please raised under Tool access jira ticket.
+
+Thanks and Regards,
+
+
+Hi Team,
+
+We tried triggering deployment for the below two env ids but it got failed. Below are the DBIds for the same. Could you assist on this.
+
+ESCM_SSEP_PROD: 739657 
+ESCM_SSEP_DR: 739659  
+
+
+Hi Gopal,
+
+Issue is with webdep home directory, it is pointing to /appserver/. But acm is looking /home/webdep.
+
+We will work with server team and update you.
+
+
+[webdep@l3pvap1285 ~]$ cat /etc/passwd | grep webdep
+webdep:x:5500:1000:Application Account for SYSWB Apps:/appserver:/bin/bash
+
+
+Hi Sudhakar,
+
+We will not have permissions on EMEA Jenkins server, please get in touch with emeascm@firstdata.com team.
+
+
+Based on the log I see that there are dependent jobs which needs to be completed or been failed.
+Please check those depend jobs as well.
+
+Waiting for the completion of DE ? eSolutions ? edoks ? edoksReporting ? edoksReporting-master-build
+DE ? eSolutions ? edoks ? edoksReporting ? edoksReporting-master-build #3 completed. Result was FAILURE
+Build step 'Conditional steps (multiple)' marked build as failure
+
+
+Regards,
+Vishnu Chalasani
+X3GDS_Engineering
+
+
+Hi Gopal,
+
+Now home directory issue has been resolved for PROD env, now jboss instance is failing to stop.
+
+Please work with nss web team.
+
+Senthil,
+
+Please work for  DR env. It seems ssh and webdep home issue.
+
+Thanks and Regards,
+
+
+Problem is solved. The difference between the 2 failed jobs and the other one was the JDK version. I’ve changed it to JDK 1.8 and now all 3 jobs are fine. 
+
+
+Hi Prabakaran/Team,
+
+As discussed over moc, this process is on hold. Please follow the old procedure for PROD deployments.
+
+Will let you know once we get further information on this.
+
+
+Hi Sampath kumar/Team,
+
+We already got approved from Scheduling team but still CA7 jobs are not created during CR implementation time. Scheduled start date for the particular task has been pushed by the system by default so please completed your task and close the same.
+
+CA7 job list is already attached in CR work details.
+
+
+Hi Team,
+
+We had issues with the 1st CR that involved server side changes due to which we are behind the deploy schedule time, hence cancelling this CR. We will be rescheduling for another day.
+
+
+Hi Ankita, 
+
+As discussed, folder “vlbc” is not available @ /opt/closedloop on r3cvap1091.1dc.com due to which ACM deployment has failed - 739722
+
+ 
+
+While verifying the deployment folder structure on DEV - r3dvap1185.1dc.com and QA - r1qvap1335.1dc.com, we are able to find “vlbc” folder @ /opt/closedloop. Please check with Unix to create the same on CAT server, so that upcoming deployments goes through without any issues.
+
+DEV Server for ref :-
+
+ 
+
+QA Server for ref :-
+
+ 
+Thanks Abhinandh.
+
+The folder is now created. Please do any updated required in scripts for CAT and PROD as we have already captured params.
+
+Next time we can go with ACM deployment and verify scripts.
+
+
+Ok. Pls create a parent repo and give limited access to create sub repo under it. Hope that would work for you. 
+
+Pls share the recent updated policy document as well if you can. 
+
+
+Please set up access for me in AutoCM the same as Lonnie Phillips (FC6CKBM), so that I can do Prod/DR deployments.
+
+Thank you,
+
+
+Hi Ed,
+
+We are holding off providing Prod/DR access as of now. Once we get an update, we will be providing access.
+
+
+Hi Vinit,
+
+As discussed, I have created Project and repo. Provided admin access for Repo level.
+
+Repo URL for ref - https://escmstash.1dc.com/projects/MTRG/repos/mtrg/browse
+
+
+Hi  David,
+
+Thanks for approving the CR#.
+
+Yes, we checked the access and able to login to the below mentioned console.
+
+https://r1pvap1495.1dc.com:9043/ibm/console/logon.jsp
+
+
+Please assist.  There are hundreds of the items in dropdown boxes for both build and deploy.  We should only see  NFE Authcore
+
+
+HI Shubho,
+
+We can kill in backend from our side, there is no option to cancel in UI model.
+
+Thanks and Regards,
+
+Hi Qingfeng,
+
+I did not find any option in AutoCM to cancel an ongoing build.
+Please let me know if there is any that users can access.
+
+
+We have created a SR under the below template and as per our discussion could see they were delivered successfully to the deploy server and we could see that build is successful. We will check and revert in case of any concern.
+
+https://escmjira.1dc.com/browse/SR-6085
+
+
+Hi SCM team,
+We are unable to deploy the code and getting the below error in autoCM ,Can you please check and advise what needs to be done.
+
+DBID: 740250
+
+Hi All,
+
+Today I have upgraded few plugins (like pipeline, groovy etc…) and restarted jenkins and now all the plugin which had issue previously are working fine.
+Still we have few plugins to be upgraded, will check the build load and will perform the restart activity.
+I am able to login to the admin console and resubmitted a deploy script.  Now it is hard failing in autocm with a different error.
+
+https://autocm.1dc.com/acm_xgui/site/status/LogView.aspx?dbid=742002
+
+
+Hi Boarding team,
+
+CRQ000000240020 is going first time deployment in Autocm for CAT environment. Please help application team during deployment.
+
+
+Hi Pallavi,
+
+I updated the CRQ with those details.
+We are still having issues with auto deployment in QA and working to fix that. Once that is stable we will go with CAT Auto deployment.
+If not we may need Manual deployment for this release.
+
+Hi Marysol
+
+CR# validation got failed. Please add environment and baseline id  in BMC Remedy. Once done let us know.
+
+Hi Lonnie,
+
+As discussed, we have issue logging in to the console - https://r3dvap1062.1dc.com:9043/ibm/console/logon.jsp with the ID and PSWD used by AutoCM, due to which deployment 741972 is not happening. Please re-deploy and test once the issue is resolved from Middleware team end.
+
+
+OK, my list is reduced down, but my deploy on dev is not working.  It is copying the war file down, but the server stop and start portion is not working so my app is not actually being deployed.
+
+Hi Vishal,
+
+Thanks for the information, when I tried to login to EMEA salt URL (https://r4pvap1113.1dc.com/#/login ) getting below error.
+
+ 
+
+Can you please suggest, how to get access to it.
+
+
+Hi Subhajyoti,
+
+As I said our solaris box has version 10. Only solaris 11 & Above open jdk will work.
+
+cat /etc/release
+                   Oracle Solaris 10 1/13 s10s_u11wos_24a SPARC
+  Copyright (c) 1983, 2013, Oracle and/or its affiliates. All rights reserved.
+                            Assembled 17 January 2013
+
+Share your dev box if possible we will investigate and make your dev box as build agent if you have any dependency.
+
+
+Hi Sathiya,
+
+To the environment ESCM_FSAMS-FDI_DEV the target server mapped is n3dvap038. This server looks to be offline and we are getting message as ‘Could not resolve hostname n3dvap038’
+Kindly check whether the environment name is correct. Could be ESCM_FSAMS-FDI_DEV_A.
+
+
+Hi Team,
+
+We are getting the below error while trying to deploy in AutoCM. Can you please look into this?
+
+Hi Saptarshi,
+Prepared the deployment script for DEV environment and uploaded into ACM. Attachment FYR.
+Kindly modify the build script as per my previous mail, ensure only the files to be deployed and copied inside package folder and then try deployment.
+
+Regards,
+
+
+Hi Manisha,
+
+The deployment in dev environment now looks good.
+Thanks for your support on this.
+Would let you know if we find anything else that needs to be fixed.
+
+Regards,
+Subhajyoti Chatterjee
+
+Hi Subhajyoti,
+
+As per the mapping mentioned below, script has been modified and uploaded in ACM.
+
+Kindly try deployment and let us know for any issues.
+
+PFA for script.
+
+Hi Manisha,
+
+We tested the deployment and we saw that following deployables are getting deployed into following instances, which should be deployed as per mapping provided.
+Please do the needful.
+
+ACH, ADJ, SPRT Instances:
+mainWar.war and main.ear are still getting deployed into instances though it’s no longer part of the codebase.
+
+CMI Instance:
+enrollment.ear, mainWar.war, main.ear, achReloadSimulator.war, authcodevalidator.war, emailsender.war are still getting deployed into instances though it’s no longer part of the codebase.
+
+Deployment Mapping Should be as follows:
+
+
+Hi Sourav,
+
+Openjdk won’t work on our solaris box(lower version) , please try with one of our agents “r3dvap1052”.
+
+Path details:
+
+Maven: /opt/escm/acm/tool/maven_3.6.0
+OpenJDK: @ /opt/escm/acm/tool/jdk-12.0.1
+
+
+Thanks and Regards,
+
+
+
+Hi Subhajyoti
+
+Please let us know which maven version you are using in your dev for openjdk 12, we need to check whether maven 3.6 is compatible with openjdk 12.
+
+Thanks and Regards,
+
+
+Hi X3 Team,
+
+When updating jdk version to 1.7 in build.sh able to build. But requirement is to build using jdk 12.
+
+Throws error while specifying jdk12. It seems issue with jdk binary or installation part. Could you help here.
+
+Thanks and Regards,
+
+
+Tim,
+
+IBM Filenet IDM is a FIL product specific third party dll which needs to be installed for a successful build. For the same, I mentioned tasks involved if we need to install it ourselves.
+
+w1pvap1019 & w3pvap1019 have .Net Framework 4.0 already which is compatible with application. Only issue is missing the above dll in server.
+
+Adam,
+
+I raised ITSR REQ000003195333 to install IBM Filenet IDM in servers w1pvap1019 & w3pvap1019. Please find the attached mail for more details.
+
+Since installation involves many steps from downloading software to completing the installation, it is better to take support team’s help.
+
+Arnab raised REQ000001464111 , REQ000001927003 to install the same in his VDI earlier because he too faced some error during installation so he approached your team.
+
+Please give your suggestions to handle this case better.
+
+Regards,
+Usharani Swaminathan
+X3GDS_Engineering
+
+Hi Saptarshi,
+As per your initial mail the files has to be directly deployed into the path D:\inetpub\wwwroot. We see in build output a folder named _ PublishedWebsites and inside that a folder TDSDefault and inside the files are copied. Instead we need the files to be directly placed inside the package folder. Please update the build accordingly.
+
+
+Hi Senthil,
+
+DEV server for testing the deployment is W3DVAP1143.
+
+Lets try with below components and check what happens.
+
+
+Hi Saptarshi,
+Below is the build output we are getting for tdsdefault. Please check and confirm if the output as intended so that we can try deployment in DEV first. Also, as discussed on call please share the DEV server name in which already few other components deployment is happening successfully. For that server will prepare deployment script and we shall try deployment.
+
+
+Hi Muthu,
+
+I was ooo for last few days. I will be available during offshore hours(IST), we can have discussions on the below.
+
+
+Hi Tim/Vishnu,
+
+Patching has been completed for below servers except N3PVAP1003  for which they have rescheduled patching.
+
+We have checked from our end by logging in to these servers.
+
+Kindly validate from your end as well.
+
+Thanks!!
+Manisha
+
+
+Hi X3 Team,
+
+Below are the archive  servers on which the space is 99% full at /escm/archive.
+
+R1PVAP1127
+R1PVAP1128
+
+Could you please have a look on it.
+
+
+Tim,
+
+I tried to build the component through w1pvap1019 &  w3pvap1019. We don’t get WindowsSDK error as in w1pvap1020 but other errors. After doing analysis of the issue with Arnab, we found that ‘IBM Filenet IDM’ software needs to be installed which is application specific third party dll to get rid of those errors.
+
+I have raised ITSR REQ000003195333 for the same to install the dll in all 3 servers  w1pvap1020 , w1pvap1019 &  w3pvap1019.
+
+Arnab – Thanks for your support & time.
+
+
+Hi Senthil,
+
+Today I uploaded one version for TDSDefault code and build is successful.
+Here is the baseline ID: tdsdefault_200116042945
+
+Please let us know when can we check deployment. Deployment needs to be done as we discussed over call.
+
+
+Team,
+
+Be aware of such scenarios against SALT minions , as informed earlier please execute JOB within the limits of our target list 
+
+Please free to reach me for any clarification/doubts, still you can refer the below link 
+
+
+https://escmconfluence.1dc.com/pages/viewpageattachments.action?pageId=87656280
+
+File Name : SALTSTACK_SSH Connectivity setup.doc
+
+
+Hi Tim,
+
+Tufin request #89415 has been raised to open ports as a first step towards Agent setup.
+Once the Tufin request has been completed will make the server as Deploy agent.
+
+
+Hi Mary,
+
+I have change the environment ESCM_OL_LINUX_PROD_SWITCHPI to false. Please deploy now and let us know for any concerns.
+
+Hi Rahul,
+
+We are holding off providing Prod/DR access as of now. Once we get an update, we will be providing access.
+
+
+Hi Santhosh,
+
+The script has been uploaded to AutoCM.
+
+Kindly try deployment and let us know if you face any issues during deployment.
+
+Thanks!!
+Manisha
+
+
+As per last communication, We suppose to get the confirmation, whether application team (Level 2/3) will going to get the Production/DR Deployment access or not? Is there is any further on it? 
+
+Please let us know, Accordingly we need mentioned the associated TASK in an implementation plan.
+
+Regards,
+Rahul
+
+
+Hi team,
+
+We do have patching on below server at 1PM UTC (7AM CT). Can I know who will support us for reboot confirmation and help us in validation too.
+
+Server:
+WABVTL1004
+
+App name:
+AutoCM
+
+Team name:
+X2GDS_DistAppDeploy,X3GDS_ENGINEERING
+
+
+Hi Navin,
+
+I could see REPRIEVE_DEPLOYMENT Jenkins job to deploy to the QA_B environment went successful.
+
+Job console url: https://escmjenkins.1dc.com/job/REPRIEVE_DEPLOYMENT/2374/console
+
+ACM url: https://autocm.1dc.com/acm_xgui/site/status/LogView.aspx?dbid=740952
+
+Hi Sudharshan,
+
+ucom-reverse-xfrmr-svcs (1.14.8) has been deployed into PCF PREPROD environment.
+
+Please validate and let us know for any issues.
+
+Thanks,
+Gokul Chandran Thiyagarajan
+
+
+Hi Harish,
+
+The Deployments has been completed successfully, please validate and let us know the status.
+
+https://autocm.1dc.com/acm_xgui/site/status/LogView.aspx?dbid=740696
+https://autocm.1dc.com/acm_xgui/site/status/LogView.aspx?dbid=740697
+https://autocm.1dc.com/acm_xgui/site/status/LogView.aspx?dbid=740698
+
+
+Hi Bharath,
+
+We submitted another build, it was successful but CloudScan failed again, DBID 740621.
+
+Thank you. 
+
+Best Regards,
+
+Hi Team,
+
+Could you please check DBID 740612, the build shows success but it’s not able to generate the fortify scan results. Could you please help.
+
+The last successful build with fortify scan results was run on Friday (1/10) DBID 740408. 
+
+
+Thank you. 
+
+Best Regards,
+
+Nandita Dubey
+
+Sanando,
+
+Already I am working with Ambi for this issue, will update you once its resolved.
+This issue is started happening after last week OS patching.
+
+
+Hi X3GDS Team,
+When we are trying to access build workspace URL we are facing below issue.
+
+Eg. After clicking the ws button in ACM in the URL  http://s1qvap952.1dc.com:8080/ws/742082/ removing the 80 or :8080 we are able to access else we are getting message as ‘The requested URL /ws/742082/ was not found on this server.’
+
+
+------------------------------
+
+Hi Team,
+
+Again Branch dropdown is not populating. Can you please review and help to fix it.
+
+We are facing this challenge very frequently and we wanted to it to be fixed permanently.
+
+
+----------------------------
+
+
+Hi Vaishnavi,
+
+Today I am getting the below error message while trying to deploy into our model environment in AutoCM. Can you please look into this.
+
+
+
+
+Hi Rintu,
+
+Yea now it’s working fine. That could be a temporary issue.
+
+
+Let us know if any issues.
+
+
+Tim,
+
+IBM Filenet IDM is a FIL product specific third party dll which needs to be installed for a successful build. For the same, I mentioned tasks involved if we need to install it ourselves.
+
+w1pvap1019 & w3pvap1019 have .Net Framework 4.0 already which is compatible with application. Only issue is missing the above dll in server.
+
+Adam,
+
+I raised ITSR REQ000003195333 to install IBM Filenet IDM in servers w1pvap1019 & w3pvap1019. Please find the attached mail for more details.
+
+Since installation involves many steps from downloading software to completing the installation, it is better to take support team’s help.
+
+Arnab raised REQ000001464111 , REQ000001927003 to install the same in his VDI earlier because he too faced some error during installation so he approached your team.
+
+Please give your suggestions to handle this case better.
+
+Hi All,
+
+We have successfully validated the code quality and web inspect changes in PROD Omaha Environment.
+
+
+Okay. 
+
+@ Ajit, Please raise invoice for 4 hours alone for the below date.
+
+Team, I am expecting the same from all. If incase you are not able to maintain mandatory 8 hours, please inform me with the justification and the date.
+
+
+
+All scripts across the board is having an proper execute permission across the board. 
+
+From an New Server Perspective # Here are ort New Linux Server, And Yes all of them are going to participate in an release 2020.Q1 deployment. 
+
+CRQ000000238158	Tuesday, Feb 04, 2020	1:00 AM	CLGC OLTP Application deployment to OMAHA l1pvap1258	ESCM_CL-OLTP_LINUX_PROD_A
+CRQ000000237841	Tuesday, Feb 06, 2020	1:00 AM	CLGC OLTP Application deployment to OMAHA l1pvap1259	ESCM_CL-OLTP_LINUX_PROD_B
+CRQ000000238163	Tuesday, Feb 11, 2020	2:00 AM	CLGC OLTP Application deployment to CHANDLER l3pvap1207	ESCM_CL-OLTP_LINUX_DR_A
+CRQ000000237842	Tuesday, Feb 11, 2020	2:00 AM	CLGC OLTP Application deployment to CHANDLER l3pvap1208	ESCM_CL-OLTP_LINUX_DR_B
+
+
+
+Agenda : Discussion on BAU Ramp down and the Impact of work load  Onboarding team 
+
+1: Onboading teams readiness in doing the BAU related activities.
+2: prioritize the work in case of multiple request from stakeholders.
+3:List of BAU activates or general deployment issues and there ETA.
+4:Deploymetns and Incident handling.
+5:Access to the existing resources to handle BAU tasks.
+6:How to handle Manual deployments that onboarding team is unaware of such as TANDAM,PEGA,KERBAROUS etc..,
+7:Admin Deploy access that provided to app team (to revert back to original ).
+8: Working  Timelines that team will support.
+9:Incident handling 
+a.	Manual CR or Unplanned CR  ‘s
+b.	SSH or Space issues 
+10.    Jira Support .
+11.Continous support & shift handover .
+
+Note :
+Please add your comments/points if I missed out anything
+
+Attendee’s:
+Anand
+Abhinandh 
+Bharath kumar
+Muthu
+Senthil
+Narendra
+Santosh 
+    
+
+	Hi Logumani,
+
+As per the instructions from the upper management , hereafter the deployment of higher environments for MGTWY_UCOM  will be taken care by Application team. 
+Therefore access has been given to you , so that you can deploy the subjected CR# accordingly.
+For any queries or concerns contact X2GDS_DistAppDeploy X2GDS_DistAppDeploy@firstdata.com or X2GDS_BoardingSCM X2GDS_BoardingSCM@firstdata.com .
+
+
+Hi Manoj,
+
+As discussed over Moc, access has been provided to you. Kindly deploy the CR# and let us know for any issues.
+
+
+Hi Vaishnavi/Team,
+
+We need to change the deployment script for eResXpress Chargeback in model environment in similar manner. SR-6162 has been raised for more details.
+
+
+Hi Anirban
+
+Jira ticket is in “Waiting for approval” state please get your manager (Robison, Holly ) approval. So that we can work on it.
+
+
+Hi  Team,
+When app teams try to submit build via ACM the git branch names are not getting populated. 
+Below sample component screenshot for reference .Could someone please check if webdep on Bitbucket/stash is locked and clear captcha to resolve this issue.
+
+Arnab,
+
+I have raised #89859 | Firewall Request - W3DVAP1080 to open ports from/to our servers. I will do the needful and update. 
+
+Hi Sanjay,
+
+The reson why you are not getting option in GIT build from is there is no repository with name "cl-interf_china_vlbc_wildfly" as you specified in jira. 
+ACM can only retrieve the data from GIT only if the repo name should be same as component name . I Could see according to your  the repo name which you specified in jira is different from actual repo.
+https://escmstash.1dc.com/projects/CL-INTERF/repos/cl-webapps-china_vlbc_wildfly/browse 
+So, I have created new component in ACM with name "cl-webapps-china_vlbc_wildfly" and provided access to you .Now you can try build.
+
+
+Hi Anirban
+
+Script has been updated. Please find the attachment.
+
+Please validate the script and let us know so that we can upload the script in ACM.
+
+Please let us know if any changes required.
+
+Hi Anirban
+
+Script has been updated. Please find the attachment.
+
+Please validate the script and let us know so that we can upload the script in ACM.
+
+Please let us know if any changes required.
+
+
+Hi AppSupport Team,
+
+Tomorrow we have Prod CR #CRQ000000241858 for LPC Voltage_SimpleAPI_Update and FOP+Webinspect+Archer_Fix at 2 pm IST. We need support from X2WEB_GBS and X1NetworkOperation team too. Please make sure we have the concerned person available from all required group at scheduled time.  
+
+Hi Shreetama
+
+Rajeev, Nandhini and Myself will be available during the CR# time from X2GDS_DistAppDeploy team.
+
+Hi Joe,
+
+We have completed most of the JIRA request and currently they are waiting for the user confirmation / Manager Approval.
+
+We will send a follow-up mail to get the confirmation, if-incase we don’t receive it we will close the pending JIRA request and the user can raise new request if they need any additional support.
+
+
+Hi Team,
+
+                We have added new shared library, Kindly update the deployment  parameters for QA – r1qvap1085 and CAT – r1cvap1053 for CMN,KOHLS,CITI,PSCU. 
+
+
+Hi Matias
+
+As X2GDS_DistAppDeploy team is getting ramped down on Jan 31st, We see your ticket is waiting for approval, please approve if required else we shall Decline and Close the ticket.
+
+https://escmjira.1dc.com/browse/SR-5930
+
+
+Hi Anand / Joe,
+
+Most of the tickets are be in our queue which are more than a year, we haven’t received any update even after multiple update.
+Closing the JIRA request mention the SLA got breached and asking them to raise a new request if any further assistance required.
+
+Hi Leonard,
+
+As confirmed by Asish, there is assistance required on below ticket, Could you please decline the same.
+
+Thanks!!
+Manisha
+
+
+Hi Nisha,
+
+The subjected SR# request is pending with Manager approval (Lane, Kyle) for long time.
+
+Please get approval from Kyle ASAP and let us know to proceed further.
+
+
+I am unable to access this.  I am not able to login.
+
+Hi Rintu,
+
+We will do the expected modifications for all the environments and will let you know once its completed.
+
+Hi Vrajesh,
+
+We see your ticket is waiting for approval, please approve if required else we shall Decline and Close the ticket.
+
+Hi Srivatsan,
+
+On Boarding team will be taking care of the upcoming new tickets, so we are trying to get an update on the older ones and proceed accordingly.
+
+Hi,  
+
+Please don’t close it. Could you suggest From whom I will get approval for this ticket.
+
+Hi Joe,
+
+As discussed in today’s meeting, 
+
+•         Tandem Code Staging – We will provide sample ITSR to AppOps/ ProdSupport team of Tandem and ask them to procure access.
+•         Jira Requests – On Boarding has to continue to support for Jira Requests.
+•         Manual Websphere Deployments – On Boarding team will support until we find a way to share the global (webdep/webdepmiddleware) id and password.
+•         Pega Code Move – We will inform AppOps Team to procure access.
+•         Kerberos Deployments – We will provide sample ITSR to AppOps/ ProdSupport team and ask them to create a similar one and procure access.
+
+Once AppOps team has procured necessary access, they will be able to deploy based on their requirements.
+
+PFA Document related to MIR3 and BNN Tool update for OnCall support.
+
+
+Hi Gangadhar,
+
+Please try to change port 8080 to 80 in another(new window after click workspace icon)window browser.
+
+Try this: 
+http://s1qvap952.1dc.com:80/ws/743477/
+
+Let us know if you face any issues.
+
+
+Hi  Team,
+
+When app teams try to submit build via ACM the git , branch names are not getting populated. 
+Below sample component screenshot for reference .Could someone please check if webdep on Bitbucket/stash is locked and clear captcha to resolve this issue.
+
+
+Hi,
+The webdep account has been locked and it has been removed.
+Now the branch has been displayed.
+
+
+Hi Vishnu
+
+I have mentioned the tickets in comments. Please check
+
+
+Nothing was mentioned in the below request.
+https://escmjira.1dc.com/browse/SR-6185
+
+Hi Joy,
+
+Issue has been resolved. Please try a new build now and let us know if you have any issues. 
+
+
+Hi Susovan,
+
+As discussed we are good with build for this component. Build.sh updated, fortify issue resolved.
+
+I am closing the requests. In case of any issue please drop an email.
+
+SR-6121, 6120
+
+Thanks and Regards,
+
+Hi Prabhakaran,
+
+As discussed, the current X2GDS_DistAppDeploy team will not be available beyond Jan 31st 2020, each applications AppOps / Production Support person or team shall take care of PEGA Deployment in future from February 1st.
+
+Please let us know if any KT required.
+
+Hello Web Team,
+
+This is regarding JIRA request -  https://escmjira.1dc.com/browse/SR-6194 . During the deployment of GG-SGS_APP_JB7 application in two instances r3qvap1052 and r3qvap1053  it's unable to stop previous process and start the new one there. Please look into the issue and let us update.
+
+
+Ty,
+
+When the JIRA ticket is created for the Bit Bucket configuration, please assign it to :
+
+X2GDS_BoardingSCM X2GDS_BoardingSCM@firstdata.com
+
+They will be handling these tasks going forward.
+
+Respectfully,
+
+Hi Tyrone,
+
+Below are the details to create a JIRA request for BitBucket configuration.
+
+escmjira.1dc.com
+Project Name : SCM Request
+Issue Type: Repository - New/Maintenance
+
+Please let me know, if you have any difficulties while raising the request.
+
+I will. First I will need approval from Shiv to merge the code to the develop branch, then create a release branch to build and deploy to Dev, so you can test the changes. After your verification, I will then deploy it to Prod, hopefully today.
+
+Hi All, 
+
+We have a bug related to providing access for individual deployers on AutoCM, We will provide access once that is resolved.
+
+As of now X2GDS_DistAppDeploy will be supporting for today’s CRQ000000193725
+
+Hi Mounika
+
+Please find the updated deployment script.
+
+Created below environments:
+ESCM_NSS_SSEP_WEBSERVICES_L3_DR
+ESCM_NSS_SSEP_WEBSERVICES_L3_PROD
+
+Please let me know if any changes required in deployment script.
+
+Please validate the script and let us know so that we can upload the script to ACM.
+
+Had you investigated why this is going down so many times in a day ?  if started raising  INC  then you might get dozens  of them every day !    First investigate and stabilize the system,  if it goes down then we will raise an INC.
+
+Hi Holly,
+
+Sure we will hold! Thanks for the update.
+
+Hi Qingfeng,
+
+The expected change is working fine.
+
+But most of the ACM users(app team) are getting below error when they are hitting submit deploy and status deploy.
+
+Kindly have a look.
+
+
+Hi Qingfeng,
+
+We have tested the flow on AutoCM PROD, it is WORKING as expected. 
+
+We checked with one of the user. The changes looks as expected. The status deploy page also working fine.
+
+Give us some more time for validation as most of the users are offline.
+
+Also we will try deployment with any of the PROD CRQ to validate the changes.
+
+We will update you back once validated.
+
+PFB screenshot for ref.
+
+Hi Vaishnavi/Manisha,
+
+Thanks for all your assistance.
+
+The issue was the ear file that was already deployed, so we removed it first and then deployed the new war file in r1cvap1124 and it started working.
+
+However we need the deployment script for ispsfund_app component, can you please share it with us.
+
+
+Hi Yogalakshmi,
+
+As discussed over moc I have triggered the deployment and shared the logs.
+Sharing the same here in mail FYR
+
+https://autocm.1dc.com/acm_xgui/site/status/LogView.aspx?dbid=743815
+
+For other environments we shall continue to support through moc.
+
+
+Hi Sathish,
+
+This mail is regarding the above mentioned CR, We checked and found you already have access for ESCM_DEM_CAT (DEV,DR,PROD) and last deployment was already done by you . 
+
+So during CR window time , while triggering the deployment if you face any issue please let us know. 
+
+Hello Web Team,
+
+Any update on this? 
+
+X2GDS Team - If Web team required to transfer the request to their group to work in this please do the necessary steps. 
+
+Please update us.
+
+Hi David/Franco,
+Checked the job https://escmjenkins.1dc.com/job/decisionquest-batchjobs-ndeupdates/26/console. It has run on the build server w1pvap1019 which is available in the 3rd line of the Jenkins logs.
+decisionquest-batchjobs-deletefilesbyage  w1pvap1020, decisionquest-batchjobs-imageinsert  w1pvap1019
+Both build servers have Fortify 19.2 installed. Below screenshot of w1pvap1019 FYR.
+
+Hi Qingfeng,
+
+We checked the flow on AutoCM PROD- CRQ000000192531 with one of the user(f9z5uky). They are getting below error when they are hitting submit deploy and deployment is not getting initiated.
+
+Kindly have a look.
+
+Hi Joy,
+
+While Vinodh is working on ssh setup I tried to update the deployment script for one component ta_ldc_dmconsole. Attaching the latest current deployment script available in ACM for this component and the excel you have uploaded in the SR. New environments have been created in ACM. Kindly calrify on the below queries to proceed with deployment script preparation.
+
+•	For updating the deployment script for new environments we should capture webshpere parameters from new servers ? 
+•	Also in the target path /appserver/WebSphere/AppServer/profiles/AppSrv01/installedApps as per the excel sheet which build output has to be deployed? escm/LDCAdminConsole.war or conf?
+
+
+Hi Suganya,
+
+As discussed over moc, for the upcoming CRQ000000209903(Start: 2/1/2020 9:00:00 AM IST) I have given deploy access for PROD and DR environments to the requested lan ID’s F2X9GP3,F6YT63L and F1KJKBR. 
+
+Please reach us if you have any other concerns.
+
+
+Hi Padmapriya
+
+PROD and DR access has been given to you for MACBILLING_DB component. Please check.
+
+
+Hi Sanjay,
+
+If you have not yet done so, please submit a request. Please include the full build script and the link to the latest build log. Additionally, please include the commands used to build the application regularly (when you are not scanning).
+
+Thank you,
+
+
+Hi Morris,
+
+•	Still ticket is yet to approve, it has been created yesterday.
+
+•	White, Cindy M has to approve. We could see server details with jira.
+
+•	Narendra has been assigned for this request. He will get in touch with your team.
+
+•	We need few more details deployment path, app server details, etc. During call he will discuss with you.
+
+•	For this process, we need to work with several dependency teams like server, middleware, storage, firewall, etc.
+
+•	So we will keep you posted on updates.
+
+
+
+Hi All,
+
+Please be advised that DistAppDeploy will no longer be doing deployments to PROD / DR as of Friday.
+
+The X2GDS_DistAppDeploy Team is being released as of Friday. Please provide your own deployer / deployment team to use AutoCM
+
+Regards,
+Abhinandh
+
+Hi Jitesh,
+
+As discussed over moc, X2GDS_DistAppDeploy Team is being released.
+
+Please provide your own deployer / deployment team to use AutoCM.
+
+Kindly let us know if any clarifications is required on the same.
+
+Hi Qingfeng,
+
+
+As discussed through moc , we have tested the flow on AutoCM, it is WORKING as expected. 
+
+We checked with two users. The changes looks as expected. The status deploy page also working fine and they could also monitor the logs.
+
+We will let you know if we face any issues. Thanks for helping us on the same.
+
+Hi Jagan,
+
+Deploy access has been given for PROD and DR environments for the below users. Going forward application team will do the PROD and DR deployments.
+
+S. No.	LAN ID	User Name
+1	F9TIEJ8	Subbaiah Kandula
+2	F3DH31X	Jagan Raj Nagarajan
+
+NOTE : Please perform the pre-validation check before the deployment. Required document available @ https://escmconfluence.1dc.com/pages/viewpageattachments.action?pageId=449977324&metadataLink=true 
+
+Hi Sugana,
+
+I work on this and will  let you know once it is done .
+
+For any other query related to access and deployment you can reach out to the  x2gds_boarding team (X2GDS_BoardingSCM@firstdata.com) .
+
+
+Hi Anirban,
+Please get the SR approved from your LM in the Jira.
+
+
+Hi Karthi 
+
+Please raise the jira ticket for Jenkins job creation. Onboarding teamX2GDS_BoardingSCM will help you to regarding Jenkins. 
+https://escmjira.1dc.com
+Project: SR Request
+Issue type: Jenkins Support
+
+
+Hi Mustaq,
+
+We have provided access to below specified users please verify and let us know incase if we miss any.
+
+
+
+Hi Narendra,
+
+      I have access to both Build and Deploy components in AutoCM. However, my AutoCM is missing the entire ‘Status’ section from before. Could you please provide me access to this section so that I can get a reference of any previous builds or deployments when required. My Lan id is: F4U89YL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
