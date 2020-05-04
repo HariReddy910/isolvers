@@ -8,7 +8,7 @@ pipeline{
 				    extensions: [], 
 				    submoduleCfg: [],
 				    userRemoteConfigs: [[credentialsId: '2a239424-0e74-41e9-8034-488a00f90311',
-			            url: 'https://github.com/HariReddy910/Lockdown.git']]])
+			            url: 'https://github.com/HariReddy910/isolvers.git']]])
 			    }
 		         }
 	    stage('Build-stage'){
