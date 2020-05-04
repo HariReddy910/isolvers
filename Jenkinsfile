@@ -21,8 +21,9 @@ pipeline{
 		 stage('Deployment')
 		 {
 		    steps{
-		               sh label: '', script: 'scp /var/jenkins_home/workspace/Devlopment/webapp/target/webapp.war ubuntu@3.21.113.130:/usr/local/tomcat/webapps'
-		             }
+                  deploy adapters: [tomcat9(credentialsId: '2a239424-0e74-41e9-8034-488a00f90311',
+		path: '', url: 'http://3.21.113.130:8080')], contextPath: 'harindra', war: '**/*.war'		          
+		    }
 	     }
 	    
         }
