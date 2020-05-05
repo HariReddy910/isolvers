@@ -1,3 +1,4 @@
+
 pipeline{
      agent any
     stages{
@@ -20,9 +21,8 @@ pipeline{
 	     }
 		 stage('Deployment')
 		 {
-		    steps{
-                  deploy adapters: [tomcat9(credentialsId: '2a239424-0e74-41e9-8034-488a00f90311',
-		path: '', url: 'http://3.21.113.130:8080')], contextPath: 'harindra', war: '**/*.war'		          
+		    steps{	
+			    deploy adapters: [tomcat9(credentialsId: '2a239424-0e74-41e9-8034-488a00f90311', path: '', url: 'http://3.21.113.130:8080')], contextPath: 'harindra', onFailure: false, war: '**/*.war'
 		    }
 	     }
 	    
