@@ -23,7 +23,13 @@ pipeline{
 		 {
 		    steps{	
 sh label: '', script: 'scp /var/jenkins_home/workspace/Devlopment/webapp/target/webapp.war ubuntu@3.21.113.130:/opt/tomcat/webapps/harindra.war'		    }
-	     }
+	     
+		 }
+	    post {
+                always {
+                    junit 'target/surefire-reports/*.xml' 
+                }
+            }
 	    
         }
 }
