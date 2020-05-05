@@ -22,7 +22,7 @@ pipeline{
 		 stage('Deployment')
 		 {
 		    steps{	
-sh label: '', script: 'scp /var/jenkins_home/workspace/Devlopment/webapp/target/webapp.war ubuntu@3.21.113.130: /opt/tomcat/webapps/harindra.war'		    }
+sh label: '', script: 'scp /var/jenkins_home/workspace/Devlopment/webapp/target/webapp.war ubuntu@3.21.113.130:/opt/tomcat/webapps/harindra.war'		    }
 	     }
 	    
         }
