@@ -69,6 +69,17 @@ pipeline{
               }
         }
      }
+        stage("Deployment-AppServer"){
+            steps{
+              echo "hi"
+             sh label: '', script: 'scp /var/lib/jenkins/workspace/MVN-Project/target/app.war ubuntu@172.31.2.23:/opt/tomcat9/webapps/MVN.war'
+           }
+         post{
+              failure{
+                  script {STAGE_FAILED = "Deploy Application : failed on application." }
+              }
+        }
+          }
             stage('Sonarqube') {
     environment {
         scannerHome = tool 'sonar_scanner'
@@ -89,7 +100,7 @@ pipeline{
            }
         }
  }       
-        stage("Deployment-AppServer"){
+        stage("PordAppServer"){
             steps{
               echo "hi"
              sh label: '', script: 'scp /var/lib/jenkins/workspace/MVN-Project/target/app.war ubuntu@172.31.2.23:/opt/tomcat9/webapps/MVN.war'
